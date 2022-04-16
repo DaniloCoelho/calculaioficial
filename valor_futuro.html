@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Calcular Financiamento</title>
+</head>
+<body>
+    <div class="fundo" id="fundo">
+        <div>
+            <nav>
+                <label class="logo">Calcule aí!</label>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Calculadoras</a>
+                        <ul>
+                            <br>
+                            <li><a href="financiamento.html">Financiamentos</a></li>
+                            <br>
+                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li><a href="">Metodologia</a>
+                        <ul style="right: 1px;">
+                            <br>
+                            <li><a href="meto_financiamentos.html">Financiamentos</a></li><br>
+                            <li><a href="meto_valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li><a href="meto_triangulo_ret.html">Triângulo (sen ,cos ,tan)</a></li>
+                            
+                        </ul>
+                    
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="linha"></div>
+        <div class="div_central">
+            <div class="div_anuncio">
+                <!--anuncio-->
+            </div>
+            <div class="calculadora" id="calculadora">
+                <h1>Valor Futuro com aporte inicial e constante</h1>
+                <img src="img/cifrao.jpg" alt="" id="foto" class="img"><br>
+               
+                <div><table class="caixa" id="table1" >
+                    <div><tr>
+                        <td>Valor inicial</td>
+                        <td><input type="number" name="" id="ValorInicial" class="campo"></td>
+                    </tr></div>
+                    <div><tr>
+                        <td>Número de meses</td>
+                        <td><input type="number" name="" id="NMeses" class="campo"></td>
+                    </tr></div><tr>
+                        <td>Taxa de crescimento</td>
+                        <td><input type="number" name="" id="TxCrescimento" class="campo"></td>
+                    </tr><tr>
+                        <td>Valor do aporte mensal</td>
+                        <td><input type="number" name="" id="ValorAMensal" class="campo"></td>
+                    </tr><tr>
+                        <td>Valor de aporte anual</td>
+                        <td><input type="number" name="" id="ValorAAnual" class="campo"></td>
+                    </tr>
+                    <tr>
+                        <td>Montante Total</td>
+                        <td><input type="number" name="" id="MontanteTotal" class="campo"></td>
+                    </tr><!--<tr>
+                        <td>Lucro Bruto</td>
+                        <td id="LucroB"></td>
+                    </tr><tr>
+                        <td>Lucro liquido</td>
+                        <td id="LucroL"></td>
+                    </tr><tr>
+                        <td>Valor Investido</td>
+                        <td id="ValorInvestido"></td>
+                    </tr>-->
+    
+                </table></div>
+                <div class="" id="campos">
+                    <tr>
+                        <h1><input type="button" id="Calcular" value="Calcular" onclick="calcular()" class="botao">
+                            <input type="button" id="limpar" value="Limpar" onclick="limpar()" class="botao">
+                        <input type="button" id="relatorio" value="Relatório" onclick="relatorio()" class="botao"></h1>
+                    </tr>
+                </div>
+            </div>
+            
+            <div class="div_anuncio">
+                <!--anuncio-->
+               
+            </div>
+        </div>
+        <div class="linha"></div>
+        <div class="div_anucio_rodape">
+            <!--anuncio-->
+        </div>
+        
+    </div>
+
+    <script src="valor_futuro.js"></script>
+
+
+</body>
+</html>

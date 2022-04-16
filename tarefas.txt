@@ -1,0 +1,35 @@
+correção de erros na aba de financiamento
+	inserir 3 parametros
+	inserir nao mais que 3 parametros normais , cuidado com taxas adicionais
+
+vf valor financiado
+vp valor prestação
+np numero de parcelas
+tj tx de juros
+ta tx adicional
+
+/////////calcular capital/////////////
+        if(!vf && np && tj && vp)
+
+	
+
+ /////calcular prestação/////////// tj!= 1
+        else if(!vp && tj && np && vf){
+
+////////// calcula numero de parcelas Price///////
+        else if (!np && vf && tj && vp){
+
+/////calcula taxa de juros
+        else if(!tj && vp && vf && np){
+
+
+        !vf && !np && tj && vp
+	!vf && np && !tj && vp
+	!vf && np && tj && !vp
+	 vf && !np && !tj && vp
+	 vf && !np && tj && !vp
+	 vf && np && !tj &&!vp
+	
+
+
+

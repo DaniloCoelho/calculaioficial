@@ -1,0 +1,395 @@
+.fundo {
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    background-color: rgb(255, 255, 255);
+}
+h1{
+    font-size: 25px;
+    text-align: center;
+    color: rgb(51, 49, 153);  
+}
+.linha{
+    padding: 10px;
+}
+.div_central{
+    display:inline-flex;
+    width: 100%;
+}
+.div_anuncio{
+    width: 22%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.calculadora{
+    
+    background-color: rgb(221, 231, 236);
+    width: 50%;
+    max-width: 600px;
+    min-width: 200px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow:7px 4px 4px rgb(156, 156, 156);
+    margin: auto;
+}
+.botao{
+    max-width: 620px;
+    min-width: 100px;
+    font-size: 15px;
+    padding: 2px;
+    margin: auto;
+    border-radius: 4px;
+    
+}
+.caixa{
+    max-width: 600px;
+    min-width: 100px;
+    padding: 10px;
+    margin: auto;
+    font-size: 18px;
+    text-align: left;
+    
+    
+}
+.campo{
+    max-width: 620px;
+    min-width: 100px;
+    font-size: 15px;
+    padding: 2px;
+    border-radius: 4px;
+}
+.alinhamento{
+    
+    text-align: right;
+}
+.tabelaimpar{
+    background-color: rgb(230, 240, 260);
+    font-size: 20px;
+    padding: 15px;
+    margin: auto;
+    max-width: 650px;
+    min-width: 100px;
+
+    
+}
+.tabelapar{
+    background-color: rgb(220, 230, 255);
+    font-size: 20px;
+    padding: 15px;
+    margin: auto;
+    max-width: 650px;
+    min-width: 100px; 
+}
+
+#caixa{
+    max-width: 650px;
+    min-width: 100px;
+    padding: 5px;
+    margin: auto;
+    
+}
+.fonte_size{
+    font-size: 19px;
+    background-color: aliceblue;
+    text-align: center;
+}
+.img{
+    border-radius: 20px;
+    margin: 10px;
+}
+.erro{
+    color: crimson ;
+    font-size: 14px;
+}
+nav{
+    background-color: rgb(221, 231, 236);
+    height: 50px;
+    width: 100%;
+    position: relative;
+    box-shadow:7px 4px 4px rgb(156, 156, 156);
+    border-radius: 10px;
+   
+}
+label.logo{
+    color: rgb(51, 49, 153);
+    font-size: 30px;
+    line-height: 30px;
+    padding: 10px;
+    font-weight: bold;
+    margin-left: 5px;
+
+}
+nav ul{
+    float: right;
+    margin: right 10px;
+    box-shadow: inset;
+    margin-top:  8px;
+    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 20px;
+    margin: 0 5px;
+    
+    
+    
+}
+nav ul li a {
+    color: rgb(51, 49, 153);
+    font-size: 17px;
+    padding: 1px;
+    border-radius: 5px;
+    text-decoration:none;
+    display: block;
+    
+}
+a.active , a:hover{
+    background: rgb(161, 177, 186);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+}
+ul ul{
+    position: absolute;
+    min-width: 200px;
+    display: none;
+    background-color: rgb(221, 231, 236);
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+ul ul li{
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    
+    
+}
+ul li:hover ul{
+    display: block;
+}
+.fonte_sizesac{
+    font-size: 14px;
+    transition: 5%;
+    text-align: center;
+}
+.fonte_sizeprice{
+    font-size: 18px;
+    transition: 5%;
+    
+}
+.rodape{
+   width: 40%; 
+}
+.div_anuncio_rodape{
+    width: 99%;
+    margin: auto;
+}
+@media(max-width: 1150px){
+    .fundo {
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+    }
+    .fonte_size{
+        font-size: 12px;
+        background-color: aliceblue;
+        transition: 5%;
+        text-align: center;
+    }
+    .calculadora{
+        background-color: rgb(221, 231, 236);
+        box-shadow:4px 2px 2px rgb(156, 156, 156);
+        text-align: center;
+        padding: 1px;
+        border-radius: 5px;
+        margin: auto;
+        font-size:12px;
+    }
+    .tabelapar{
+        font-size: 13px;
+        padding: 1px;
+        margin: auto;
+        max-width: 99%;
+        min-width: 10px; 
+        background-color: rgb(220, 230, 255);
+    }
+    .tabelaimpar{
+        background-color: rgb(230, 240, 260);
+        font-size: 13px;
+        padding: 1px;
+        margin: auto;
+        max-width: 99%;
+        min-width: 10px; 
+    }
+    .campo{
+        max-width: 500px;
+        min-width: 50px;
+        font-size: 12px;
+        padding: 2px;
+        border-radius: 4px;
+    }
+    .botao{
+        max-width: 500px;
+        min-width: 80px;
+        font-size: 14px;
+        margin: auto;
+    }
+    h1{
+        font-size: 17px;
+        text-align: center;
+    }
+
+
+}
+
+@media(max-width: 700px) {
+    .fundo {
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        background-color: rgb(255, 255, 255);
+        margin: auto;
+    }
+    .linha{
+        padding: 5px;
+    }
+    .fonte_size{
+        font-size: 12px;
+        background-color: aliceblue;
+        transition: 5%;
+        text-align: center;
+    }
+    .fonte_sizesac{
+        font-size: 10px;
+        transition: 5%;
+        text-align: center;
+    }
+    .fonte_sizeprice{
+        font-size: 13px;
+        transition: 5%;
+        
+    }
+    .img{
+        border-radius: 10px;
+        margin: 5px;
+        max-width: 70%;
+    }
+    
+    .tabelapar{
+        font-size: 10.5px;
+        padding: 1px;
+        margin: auto;
+        max-width: 99%;
+        min-width: 10px; 
+        background-color: rgb(220, 230, 255);
+    }
+    .tabelaimpar{
+        background-color: rgb(230, 240, 260);
+        font-size: 10.5px;
+        padding: 1px;
+        margin: auto;
+        max-width: 99%;
+        min-width: 10px; 
+    }
+    .calculadora{
+        background-color: rgb(221, 231, 236);
+        box-shadow:4px 2px 2px rgb(156, 156, 156);
+        max-width: 99%;
+        min-width: 99%;
+        width: 99%;
+        text-align: center;
+        padding: 1px;
+        border-radius: 5px;
+        margin: auto;
+        font-size:12px;
+    }
+    .caixa{
+        max-width: 500px;
+        min-width: 100px;
+        padding: 1px;
+        margin: auto;
+        font-size: 13px;
+        
+    }
+    .botao{
+        max-width: 500px;
+        min-width: 65px;
+        font-size: 12px;
+        margin: auto;
+    }
+    .campo{
+        max-width: 500px;
+        min-width: 50px;
+        font-size: 12px;
+        padding: 2px;
+        border-radius: 2px;
+    }
+    .erro{
+        color: crimson ;
+        font-size: 11px;
+    }
+    label.logo{
+        color: rgb(51, 49, 153);
+        font-size: 11px;
+        line-height: 1px;
+        padding: 1px;
+        font-weight: bold;
+        margin-left: 1px;
+        position:initial;
+    }
+    nav{
+        background:  rgb(221, 231, 236);
+        
+        width: 100%;
+        position: relative;
+        box-shadow:4px 2px 2px rgb(156, 156, 156);
+        border-radius: 3px;
+        
+    }
+    nav ul{
+        float: right;
+        margin: right 1px;
+        padding: 1px;
+    }
+    nav ul li{
+        position:relative;
+        display: inline-block;
+        line-height: 15px;
+        margin: 2px;
+        padding: 1px;  
+        
+        
+    }
+    nav ul li a {
+        color: rgb(51, 49, 153);
+        font-size: 11px;
+        padding: 0px;
+        border-radius: 2px;
+        
+    }
+    a.active , a:hover{
+        background: rgb(161, 177, 186);
+    }
+    h1{
+        font-size: 14px;
+        text-align: center;
+    }
+    .div_central{
+        display:block;
+    }
+    .div_anuncio{
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    
+    }
+    .rodape{
+        width: 99%; 
+     }
+    
+    
+}

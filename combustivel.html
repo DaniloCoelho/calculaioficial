@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Calcular</title>
+</head>
+<body>
+    <div class="fundo" id="fundo">
+        <div>
+            <nav>
+                <label class="logo">Calcule aí!</label>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Calculadoras</a>
+                        <ul>
+                            <br>
+                            <li><a href="financiamento.html">Financiamentos</a></li>
+                            <br>
+                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li><a href="">Metodologia</a>
+                        <ul style="right: 1px;">
+                            <br>
+                            <li><a href="meto_financiamentos.html">Financiamentos</a></li><br>
+                            <li><a href="meto_valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li><a href="meto_triangulo_ret.html">Triângulo (sen ,cos ,tan)</a></li>
+                            
+                        </ul>
+                    
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="linha"></div>
+        <div class="div_central">
+            <div class="div_anuncio">
+                <!--anuncio-->
+            </div>
+            <div class="calculadora" id="calculadora">
+                <div style="width: 95%;margin: auto;">
+                        <h1>Cálculo de Combustível</h1>
+                    <br>
+                    <p>Neste cálculo são usadas duas fórmulas , sendo SAC (Sistema de Amortização Constante e Price(ou tabela Francesa).</p>
+                    <p>No Sistema SAC as amortizações são constantes porém o valor juros vai diminuindo ao longo do tempo , sendo mais alto no começo e menos no fim.</p>
+                    <p>No sistema PRICE os juros são constantes e a amortização vai aumentando ao longo do tempo , sendo menor no começo e maior no final chegando quase no valor da parcela.</p>
+                    <p>Em ambos os sistemas o cálculo de IOF é refinanciado junto com o capital inicial. <br> Exemplo: um financiamento com capital X gera um valor de IOF de Y , posteriormente é financiado o Capital X+Y , onde é mostrado na aplicação parcelas sem financiamento de IOF e parcelas com financiamento de IOF .</p>
+                    <p>O cálculo de IOF é feito com base em 0,38% do capital + 0,0082% ao dia limitado a 365 dias ou 3%. Exemplo um financiamento em 24 meses Equivale 730 dias, porém o cálculo limite é 365 dias X 0,0082% do capital. E cada dia seguinte é somado 365 X 0,0082% do capital.
+                    </p>
+                    
+                    </div>
+
+                    
+
+            </div>
+            
+            <div class="div_anuncio">
+                <!--anuncio-->
+            </div>
+
+        </div>
+        <div class="linha"></div>
+        <div class="rodape" style="margin: auto;">
+            Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores aproximados pois os bancos e financeiras podem implentar formulas diversas de cálculo de financiamentos ou diluição de taxas e impostos nas parcelas.
+        </div>
+        <div class="linha"></div>
+        <div class="div_anucio_rodape">
+            <!--anuncio-->
+        </div>
+
+
+    </div>
+    <script src="logica.js"></script>
+</body>
+</html>

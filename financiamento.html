@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Calcular Financiamento</title>
+</head>
+<body>
+    <div class="fundo">
+        <div>
+            <nav>
+                <label class="logo">Calcule aí!</label>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Calculadoras</a>
+                        <ul>
+                            <br>
+                            <li><a href="financiamento.html">Financiamentos</a></li>
+                            <br>
+                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                            <br>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            
+                        </ul>
+                        
+                    </li>
+                    <li><a href="">Metodologia</a>
+                        <ul style="right: 1px;">
+                            <br>
+                            <li><a href="meto_financiamentos.html">Financiamentos</a></li>
+                            <br>
+                            <li><a href="meto_valor_futuro.html">Valor Futuro de capital</a></li>
+                            <br>
+                            <li><a href="meto_triangulo_ret.html">Triângulo (sen ,cos ,tan)</a></li>
+                            
+                        </ul>
+                    
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="linha"></div>
+        <div class="div_central">
+            <div class="div_anuncio">
+                <!--anuncio-->
+            </div>
+            <div class="calculadora" id="calculadora">
+                <h1>Calculadora de financiamento e IOF</h1>
+                <img src="img/cifrao.jpg" alt="" id="foto" class="img"><br>
+                <select name="" id="opcoes" class="botao" onchange="opcaops()" >
+                    <option value="price">Price</option>
+                    <option value="sac">Sac</option>
+                </select>
+                <div><table class="caixa" id="table1" >
+                    <div><tr>
+                        <td>Valor financiado</td>
+                        <td><input type="number" name="" id="ValorFinanciado" class="campo"></td>
+                    </tr></div>
+                    <div><tr>
+                        <td>Número de parcelas</td>
+                        <td><input type="number" name="" id="Nparcelas" class="campo"></td>
+                    </tr></div><tr>
+                        <td>Taxa de juros</td>
+                        <td><input type="number" name="" id="TxJuros" class="campo"></td>
+                    </tr><tr>
+                        <td id="Valor_Parcela">Valor da parcela</td>
+                        <td><input type="number" name="" id="ValorParcela" class="campo"></td>
+                    </tr><tr>
+                        <td id="ValorParcela">Taxas de adicionais</td>
+                        <td><input type="number" name="" id="Taxaadicional" class="campo"></td>
+                    </tr>
+                    <tr>
+                        <td id="LabelMontanteTotal"></td>
+                        <td id="MontanteTotal"></td>
+                    </tr><tr>
+                        <td id="LabelIOF"></td>
+                        <td id="IOF"></td>
+                    </tr><tr>
+                        <td id="ValorParcelaIOF" ></td>
+                        <td id="PIOF"></td>
+                    </tr><tr>
+                        <td id="LabelCET"></td>
+                        <td id="CET"></td>
+                    </tr>
+
+                </table></div>
+                <div class="menusecundario" id="campos">
+                    <tr>
+                        <h1><input type="button" id="Calcular" value="Calcular" onclick="calcular()" class="botao">
+                            <input type="button" id="limpar" value="Limpar" onclick="limpar()" class="botao">
+                        <input type="button" id="relatorio" value="Relatório" onclick="relatorio()" class="botao"></h1>
+                    </tr>
+                </div>
+            </div>
+            <div class="div_anuncio">
+                <!--anuncio-->
+            </div>
+            
+        </div>
+        <div class="linha"></div>
+        <div class="div_anucio_rodape">
+            <!--anuncio-->
+        </div>
+        <script src="lógica_financiamento.js"></script>
+        <script src="logica.js"></script>
+        <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846998364942576"
+        crossorigin="anonymous"></script>-->
+    <!-- display horizontal -->
+    <!--<ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-4846998364942576"
+        data-ad-slot="1706378466"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>-->
+    <!--</div>-->
+
+</body>
+</html>

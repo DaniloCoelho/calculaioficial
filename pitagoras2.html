@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+
+    <title>Pitágoras</title>
+</head>
+<body>
+    <div class="fundo">
+        <div>
+            <nav>
+                <label class="logo">Calcule aí!</label>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="">Calculadoras</a>
+                        <ul>
+                            <br>
+                            <li><a href="financiamento.html">Financiamentos</a></li>
+                            <br>
+                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li><a href="">Metodologia</a>
+                        <ul style="right: 1px;">
+                            <br>
+                            <li><a href="meto_financiamentos.html">Financiamentos</a></li><br>
+                            <li><a href="meto_valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li><a href="meto_triangulo_ret.html">Triângulo (sen ,cos ,tan)</a></li>
+                            
+                        </ul>
+                    
+                    </li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="linha"></div>
+        <div class="div_central">
+            <div class="div_anuncio">
+                <!--anuncio-->
+            </div>
+            <div class="calculadora">
+                <h1>Do que preciso?</h1>
+                <img src="img/relações trigonometricas t.jfif" alt="">
+                <table class="caixa" id="table1">
+                    <tr>
+                        <td>Hipotenusa</td>
+                        <td><input type="number" name="" id="hipotenusa" class="campo"></td>
+                    </tr>
+                    <tr>
+                        <td>Cateto a</td>
+                        <td><input type="number" name="" id="cateto_a" class="campo"></td>
+                    </tr><tr>
+                        <td>Cateto b</td>
+                        <td><input type="number" name="" id="cateto_b" class="campo" ></td>
+                    </tr><tr>
+                        <td>Seno &beta;</td>
+                        <td><input type="number" name="" id="senob" class="campo"></td>
+                    </tr><tr>
+                        <td>Seno &alpha;</td>
+                        <td><input type="number" name="" id="senoa" class="campo"></td>
+                    </tr><tr>
+                        <td>Cosseno &alpha;</td>
+                        <td><input type="number" name="" id="cossenoa" class="campo"></td>
+                    </tr><tr>
+                        <td>Cosseno &beta;</td>
+                        <td><input type="number" name="" id="cossenob" class="campo"></td>
+                    </tr><tr>
+                        <td>Tangente &alpha;</td>
+                        <td><input type="number" name="" id="tangentea" class="campo"></td>
+                    </tr><tr>
+                        <td>Tangente &beta;</td>
+                        <td><input type="number" name="" id="tangenteb" class="campo"></td>
+                    </tr>
+
+                </table>
+                <div class="" id="campos">
+                    <h1><input type="button" value="Calcular" onclick="calcular()" class="botao"> <input type="button" value="Limpar" onclick="limpar()" class="botao"> </h1>
+                </div>
+
+            </div>
+            <div class="div_anuncio">
+                <!--anuncio-->
+                
+            </div>
+        </div>
+        <div class="linha"></div>
+        <div class="div_anucio_rodape">
+            <!--anuncio-->
+        </div>
+
+    </div>
+
+    <script src="logica_triagonometria.js"></script>
+    <script src="logica.js"></script>
+</body>
+</html>
+
+
+<!--precisa de id
