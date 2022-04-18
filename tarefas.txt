@@ -30,6 +30,57 @@ ta tx adicional
 	 vf && !np && tj && !vp
 	 vf && np && !tj &&!vp
 	
+vl , ql ,vtot , qui ,kml
+
+
+vl  ql    ok
+	kml
+
+vl  vtot  ok
+	kml
+
+ql  vtot  ok
+	kml
+
+ql  qui   ok
+	vl , kml
+
+ql qui   ok
+	vtot , kml
+
+kml qui   ok
+	vl
+
+kml qui  ok
+	vtot
+	
+	
+kml ql    ok
+	vl
+
+kml ql  ok
+	vtot
+	
+
+kml vl    erro??
+
+kml vtot  ok
+	vl
+
+qui vl    ok
+	kml
+
+qui vtot  ok
+	kml
+
+
+
+
+
+
+
+
+
 
 
 
