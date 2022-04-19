@@ -46,35 +46,19 @@
                 <!--anuncio-->
             </div>
             <div class="calculadora" id="calculadora">
-                <h1>Cálculo de combustível</h1>
-                <img src="img/combustivel2.png" alt=""><br>
-                <select name="" id="opcoes" class="botao" >
-                    <option value="gasolina">Gasolina</option>
-                    <option value="etanol">Etanol</option>
-                </select>
-                <table class="caixa" id="table1">
-                    <tr>
-                        <td>Valor por litro</td>
-                        <td><input type="number" name="" id="Valorporlitro" class="campo"></td>
-                    </tr>
-                    <tr>
-                        <td>Qtdd de litros</td>
-                        <td><input type="number" name="" id="Qtdddelitros" class="campo"></td>
-                    </tr><tr>
-                        <td>Quilomêtros</td>
-                        <td><input type="number" name="" id="Quilomêtros" class="campo" ></td>
-                    </tr><tr>
-                        <td>Km por litro</td>
-                        <td><input type="number" name="" id="Kmporlitro" class="campo"></td>
-                    </tr><tr>
-                        <td>Valor total</td>
-                        <td><input type="number" name="" id="Valortotal" class="campo"></td>
-                    </tr>
-                </table>
-                <div class="" id="campos">
-                    <h1><input type="button" value="Calcular" onclick="calcular()" class="botao"> <input type="button" value="Limpar" onclick="limpar()" class="botao"> </h1>
-                </div>
-                
+                <div style="width: 95%;margin: auto;">
+                        <h1>Metodologia Financiamentos</h1>
+                    <br>
+                    <p>Neste cálculo são usadas duas fórmulas , sendo SAC (Sistema de Amortização Constante e Price(ou tabela Francesa).</p>
+                    <p>No Sistema SAC as amortizações são constantes porém o valor juros vai diminuindo ao longo do tempo , sendo mais alto no começo e menos no fim.</p>
+                    <p>No sistema PRICE os juros são constantes e a amortização vai aumentando ao longo do tempo , sendo menor no começo e maior no final chegando quase no valor da parcela.</p>
+                    <p>Em ambos os sistemas o cálculo de IOF é refinanciado junto com o capital inicial. <br> Exemplo: um financiamento com capital X gera um valor de IOF de Y , posteriormente é financiado o Capital X+Y , onde é mostrado na aplicação parcelas sem financiamento de IOF e parcelas com financiamento de IOF .</p>
+                    <p>O cálculo de IOF é feito com base em 0,38% do capital + 0,0082% ao dia limitado a 365 dias ou 3%. Exemplo um financiamento em 24 meses Equivale 730 dias, porém o cálculo limite é 365 dias X 0,0082% do capital. E cada dia seguinte é somado 365 X 0,0082% do capital.
+                    </p>
+                    
+                    </div>
+
+                    
 
             </div>
             
@@ -85,7 +69,7 @@
         </div>
         <div class="linha"></div>
         <div class="rodape" style="margin: auto;">
-            Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores aproximados 
+            Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores aproximados pois os bancos e financeiras podem implentar formulas diversas de cálculo de financiamentos ou diluição de taxas e impostos nas parcelas.
         </div>
         <div class="linha"></div>
         <div class="div_anucio_rodape">
@@ -94,6 +78,6 @@
 
 
     </div>
-    <script src="logica_combustivel.js"></script>
+    <script src="logica.js"></script>
 </body>
 </html>
