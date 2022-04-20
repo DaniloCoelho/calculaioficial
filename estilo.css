@@ -344,35 +344,43 @@ ul li:hover ul{
     nav{
         background:  rgb(221, 231, 236);
         
-        width: 100%;
+        width: 99%;
         position: relative;
         box-shadow:4px 2px 2px rgb(156, 156, 156);
         border-radius: 3px;
+        margin-right: 30px;
         
     }
     nav ul{
         float: right;
-        margin: right 1px;
+        margin: right 10px;
         padding: 1px;
+        
     }
     nav ul li{
         position:relative;
         display: inline-block;
         line-height: 15px;
         margin: 2px;
-        padding: 1px;  
+        padding: 1px; 
+        text-align: left;
+        
+         
         
         
     }
     nav ul li a {
         color: rgb(51, 49, 153);
         font-size: 11px;
-        padding: 0px;
+        padding: 1px;
         border-radius: 2px;
+        
+       
         
     }
     a.active , a:hover{
         background: rgb(161, 177, 186);
+        
     }
     h1{
         font-size: 14px;
