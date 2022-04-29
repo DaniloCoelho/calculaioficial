@@ -13,7 +13,7 @@
             <nav>
                 <label class="logo">Calcule aí!</label>
                 <ul>
-                    <li><a href="default.php">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="">Calculadoras</a>
                         <ul>
                             <br>

@@ -16,7 +16,7 @@ function calcular(){
         kmlm = 11.98
     }
     if (opcao == "etanol"){
-        vc = 4,646
+        vc = 4.646
         kmlm = 8.25
     }
     if(document.getElementById('Valorporlitro')){
@@ -118,11 +118,12 @@ function calcular(){
         control = true
     }
     if (qui && !vtot && !ql){
+        control = true
         if(kml){
-            ql = qui / ql
+            ql = qui / kml
         }else{
             kml = kmlm
-            ql = qui / ql
+            ql = qui / kml
         }
         if(vl){
             vtot = ql * vl
@@ -131,9 +132,10 @@ function calcular(){
             vtot = ql * vl
         }
         exibir()
-        control = true
+        
     }
     if (ql && !qui && !vtot){
+        control = true
         if(vl){
             vtot = ql * vl
         }else{
@@ -147,7 +149,7 @@ function calcular(){
             qui = ql * kml
         }
         exibir()
-        control = true
+        
     }
     if(((vl && kml)||(!vl && kml)||(vl && !kml)) && !ql && !qui && !vtot){
         erroparametro()
@@ -170,7 +172,7 @@ function calcular(){
         if(!v_tot){
             v_tot = document.getElementById('Valortotal')
         }
-        quil.value = qui
+        quil.value = qui.toFixed(2)
         km_l.value = kml.toFixed(2)
         q_l.value = ql.toFixed(2)
         v_l.value = vl.toFixed(3)
