@@ -12,11 +12,11 @@ function calcular(){
     
     opcao = opcoes.value
     if (opcao == "gasolina"){
-        vc = 7.267
+        vc = 7.283
         kmlm = 11.98
     }
     if (opcao == "etanol"){
-        vc = 4.646
+        vc = 5.539
         kmlm = 8.25
     }
     if(document.getElementById('Valorporlitro')){
