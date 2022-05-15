@@ -48,26 +48,92 @@ function calcular(){
 
 
     */
-    if(rai && alt && !per && !are && !vol && !control){
-        per = 2* pi * rai
-        are = 2*(pi*(rai**2)) + 2*(pi*rai*alt)
-        vol= pi* (rai**2) * alt
-        dia = rai*2
+    if((rai||dia) && alt && !per && !are && !vol && !control){
+        if(!rai){
+            rai = dia / 2
+        }else{
+            per = 2* pi * rai
+            are = 2*(pi*(rai**2)) + 2*(pi*rai*alt)
+            vol= pi* (rai**2) * alt
+            dia = rai*2
+        }
         exibir()
         control = true
     }
-    if(rai && per && !alt && !are && !vol){
-
+    if((rai||dia) && per && !alt && !are && !vol && !control){
+        //erro
     }
-    if(rai && are && !per && !alt && !vol && !control){
-        alt = ((are - (2*(pi*(rai**2))))/((2*pi )* (2*rai)))*2
+    if((rai||dia) && are && !per && !alt && !vol && !control){
+        if(!rai){
+            rai = dia / 2
+        }else{
+            alt = ((are - (2*(pi*(rai**2))))/((2*pi )* (2*rai)))*2
+            per = 2* pi * rai
+            vol= pi* (rai**2) * alt
+            dia = rai * 2
+        }
+        exibir()
+        control = true
+    }
+    if(rai && dia && !are && !per && !alt && !vol && !control){
+        //erro
+    }
+    if((rai||dia) && vol && !are && !per && !vol && !control){
+        if(!rai){
+            rai = dia / 2
+        }else{
+            alt = vol /(pi * (rai**2))
+            dia = rai * 2
+            per = 2* pi * rai
+            are = 2*(pi*(rai**2)) + 2*(pi*rai*alt)
+        }
+        exibir()
+        control = true
+    }
+    if(alt && per && !rai && !vol && !dia && !are && !control){
+        rai = per / (2*pi)
+        vol= pi* (rai**2) * alt
         dia = rai * 2
-        per = 2* pi * rai
-        vol= pi* (rai**2) * alt
+        are = 2*(pi*(rai**2)) + 2*(pi*rai*alt)
         exibir()
         control = true
     }
+    if(alt && are && !rai && !vol && !dia && !per && !control){
+        
+    }
+    if(alt && vol && !are && !rai && !dia && !per && !control){
 
+    }
+    if(per && are && !alt && !rai && !dia && !vol && !control){
+
+    }
+    if(per && vol && !alt && !rai && !dia && !are && !control){
+
+    }
+    if(per && vol && !alt && !rai && !dia && !are && !control){
+
+    }
+    if(per && vol && !alt && !rai && !dia && !are && !control){
+
+    }
+    if(are && vol && !alt && !rai && !dia && !per && !control){
+
+    }
+    
+    /*
+        rai || dia && alt  ok
+        rai || dia && per  ok 
+        rai || dia && are  ok
+        rai || dia && vol  ok
+        rai dia  falta msg de erro
+        alt per  ok
+        alt are  -
+        alt vol  -
+        per are  -
+        per vol  -
+        are vol
+
+    */
 
     function exibir(){
         if(altura){
