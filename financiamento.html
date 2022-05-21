@@ -11,7 +11,7 @@
 <body>
     <div class="fundo">
         <div>
-            <nav>
+            <nav style="z-index:10 ; clear: both;">
                 <label class="logo">Calcule aí!</label>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
@@ -22,7 +22,8 @@
                             <br>
                             <li><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
                             <li><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
-                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
+                            <li><a href="cilindro.html">Cilindro</a></li><br>
                             
                         </ul>
                         
@@ -112,7 +113,7 @@
             <h1>Metodologia Financiamentos</h1>
                     <br>
                     <p>Neste cálculo são usadas duas fórmulas , sendo SAC (Sistema de Amortização Constante e Price(ou tabela Francesa).</p>
-                    <p>No Sistema SAC as amortizações são constantes porém o valor juros vai diminuindo ao longo do tempo , sendo mais alto no começo e menos no fim.</p>
+                    <p>No Sistema SAC as amortizações são constantes porém o valor juros vai diminuindo ao longo do tempo , sendo mais alto no começo e menor no fim.</p>
                     <p>No sistema PRICE os juros são constantes e a amortização vai aumentando ao longo do tempo , sendo menor no começo e maior no final chegando quase no valor da parcela.</p>
                     <p>Em ambos os sistemas o cálculo de IOF é refinanciado junto com o capital inicial. <br> Exemplo: um financiamento com capital X gera um valor de IOF de Y , posteriormente é financiado o Capital X+Y , onde é mostrado na aplicação parcelas sem financiamento de IOF e parcelas com financiamento de IOF .</p>
                     <p>O cálculo de IOF é feito com base em 0,38% do capital + 0,0082% ao dia limitado a 365 dias ou 3%. Exemplo um financiamento em 24 meses Equivale 730 dias, porém o cálculo limite é 365 dias X 0,0082% do capital. E cada dia seguinte é somado 365 X 0,0082% do capital.

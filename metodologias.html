@@ -21,7 +21,8 @@
                             <br>
                             <li><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
                             <li><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
-                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
+                            <li><a href="cilindro.html">Cilindro</a></li><br>
                         </ul>
                         
                     </li>

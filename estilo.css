@@ -3,6 +3,8 @@
     justify-content: center;
     justify-items: center;
     background-color: rgb(255, 255, 255);
+    position: absolute;
+    visibility:visible;
 }
 h1{
     font-size: 25px;
@@ -15,11 +17,15 @@ h1{
 .div_central{
     display:inline-flex;
     width: 100%;
+    padding: 5px;
+    
 }
 .div_anuncio{
     width: 22%;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    
 
 }
 .calculadora{
@@ -107,9 +113,10 @@ nav{
     background-color: rgb(221, 231, 236);
     height: 50px;
     width: 100%;
-    position: relative;
+    position:relative;
     box-shadow:7px 4px 4px rgb(156, 156, 156);
     border-radius: 10px;
+    z-index:1 ;
    
 }
 label.logo{
@@ -127,11 +134,15 @@ nav ul{
     box-shadow: inset;
     margin-top:  8px;
     
+    
+    
 }
 nav ul li{
     display: inline-block;
     line-height: 20px;
     margin: 0 5px;
+    
+    
     
     
     
@@ -149,6 +160,8 @@ a.active , a:hover{
     background: rgb(161, 177, 186);
     border-radius: 5px;
     color: rgb(255, 255, 255);
+    
+    
 }
 ul ul{
     position: absolute;
@@ -165,9 +178,11 @@ ul ul li{
     margin: 0px;
     
     
+    
 }
 ul li:hover ul{
     display: block;
+    position: absolute;
 }
 .fonte_sizesac{
     font-size: 14px;
