@@ -24,6 +24,7 @@
                             <li><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
                             <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
                             <li><a href="cilindro.html">Cilindro</a></li><br>
+                            <li><a href="circulo.html">Círculo</a></li><br>
                             
                         </ul>
                         
@@ -41,13 +42,9 @@
             </div>
             <div class="linha"></div>
             <div class="calculadora">
-                <h1>Calculadora de um cilindro</h1>
-                <img src="img/cilindro.png" alt="">
+                <h1>Calculadora de um Círculo</h1>
+                <img src="img/circulo.png" alt="">
                 <table class="caixa" id="table1">
-                    <tr>
-                        <td>h- altura</td>
-                        <td><input type="number" name="" id="altura" class="campo"></td>
-                    </tr>
                     <tr>
                         <td>r- raio</td>
                         <td><input type="number" name="" id="raio" class="campo"></td>
@@ -58,11 +55,9 @@
                         <td>p- perímetro</td>
                         <td><input type="number" name="" id="perimetro" class="campo"></td>
                     </tr><tr>
-                        <td>a- área superfície </td>
+                        <td>a- área </td>
                         <td><input type="number" name="" id="area" class="campo"></td>
-                    </tr><tr>
-                        <td>volume</td>
-                        <td><input type="number" name="" id="volume" class="campo"></td>
+                    </tr>
 
                 </table>
                 <div class="" id="campos">
@@ -82,43 +77,37 @@
         </div>
         <div class="rodape" style="margin: auto; text-align: left;">
             <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .</p>
-            <h1>Metodologia Cilindro</h1>
+            <h1>Metodologia círculo</h1>
                 <br>
-                <p> Nessa ferrramenta usamos as relações de cálculos de circulos e cilindros. </p>
+                <p> Nessa ferrramenta usamos as relações de cálculos de circulos. </p>
                 <p>
-                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto cilíndrico e calcular volume de objetos .
+                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto .
                 </p>
                 <p>
-                    O usuário deve inserir pelo menos dois parâmetros para calcular todos os outros .
+                    O usuário deve inserir pelo menos um parâmetro para calcular todos os outros .
                 </p>
                 <br>
                 São usadas as fórmulas:
                 <br>
                 <br>
-                Volume = &pi; . raio<sup>2</sup> . altura
                 <br>
-                Área da superfície = 2 . &pi; . altura + 2 . &pi; . raio<sup>2</sup>
+                Área = 2 . &pi; . raio<sup>2</sup>
                 <br>
                 Perímetro ou circuferência = 2 . &pi; . raio
                 <br>
                 Diâmetro = 2 . raio
                 <br>
                 <p>
-                    O cálculo da área da superfície (2 * área da base + área lateral da superfície) é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
+                    O cálculo da área é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
                 </p>
+                
                 <p>
-                    O cálculo de volume é medido em unidade ao cubo (u<sup>3</sup>) e retornado ao usuário .
-                </p>
-                <p>
-                    Essa ferramenta necessita de dois parâmetros ou mais que possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,é preciso observar essas hipóteses .
+                    Essa ferramenta necessita de um parâmetro ou mais que possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,é preciso observar essas hipóteses .
                 </p>
         </div>
 
     </div>
 
-    <script src="logica_cilindro.js"></script>
+    <script src="logica_circulo.js"></script>
 </body>
 </html>
-
-
-<!--precisa de id
