@@ -140,12 +140,7 @@ nav ul{
 nav ul li{
     display: inline-block;
     line-height: 20px;
-    margin: 0 5px;
-    
-    
-    
-    
-    
+    margin: 0 5px;  
 }
 nav ul li a {
     color: rgb(51, 49, 153);
@@ -159,9 +154,7 @@ nav ul li a {
 a.active , a:hover{
     background: rgb(161, 177, 186);
     border-radius: 5px;
-    color: rgb(255, 255, 255);
-    
-    
+    color: rgb(255, 255, 255);   
 }
 ul ul{
     position: absolute;
@@ -175,10 +168,7 @@ ul ul{
 ul ul li{
     display: block;
     padding: 0px;
-    margin: 0px;
-    
-    
-    
+    margin: 0px;   
 }
 ul li:hover ul{
     display: block;
@@ -192,7 +182,6 @@ ul li:hover ul{
 .fonte_sizeprice{
     font-size: 18px;
     transition: 5%;
-    
 }
 .rodape{
    width: 40%; 
@@ -200,6 +189,11 @@ ul li:hover ul{
 .div_anuncio_rodape{
     width: 99%;
     margin: auto;
+}
+.label_dropdown{
+    background-color: rgb(55, 55, 153);
+    color: white;
+    font-size: 14px;
 }
 @media(max-width: 1150px){
     .fundo {
@@ -257,8 +251,11 @@ ul li:hover ul{
         font-size: 17px;
         text-align: center;
     }
-
-
+    .label_dropdown{
+        background-color: rgb(55, 55, 153);
+        color: white;
+        font-size: 12px;
+    }
 }
 
 @media(max-width: 700px) {
@@ -378,19 +375,13 @@ ul li:hover ul{
         line-height: 15px;
         margin: 2px;
         padding: 1px; 
-        text-align: left;
-        
-         
-        
-        
+        text-align: left;    
     }
     nav ul li a {
         color: rgb(51, 49, 153);
         font-size: 11px;
         padding: 1px;
-        border-radius: 2px;
-        
-       
+        border-radius: 2px; 
         
     }
     a.active , a:hover{
@@ -413,6 +404,11 @@ ul li:hover ul{
     .rodape{
         width: 99%; 
      }
-    
+    .label_dropdown{
+        background-color: rgb(55, 55, 153);
+        color: white;
+        font-size: 8px;
+        
+    }
     
 }

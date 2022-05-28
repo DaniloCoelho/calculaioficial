@@ -177,6 +177,10 @@ function calcular(){
         q_l.value = ql.toFixed(2)
         v_l.value = vl.toFixed(3)
         v_tot.value = vtot.toFixed(2)
+        var kmr = document.createElement('label')
+        kmr.innerHTML = "Valor por quilômetro rodado R$" + (vtot / qui).toFixed(2)
+        kmr.classList = "caixa"
+        campos.appendChild(kmr)
     }
 }
 function limpar(){
@@ -201,5 +205,5 @@ function teste_n_parametros(){
         campos.appendChild(txt)
         control = true
     }
-    
 }
+

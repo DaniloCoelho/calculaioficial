@@ -31,6 +31,7 @@ function calcular(){
         var vol = Number(volume.value)
     }
     var control = false
+    
 
     if((rai || dia || per) && alt && !are && !vol && !control){
         if(rai){
@@ -163,20 +164,6 @@ function calcular(){
         }
         control = true
     }
-    
-    /*
-        rai || dia && alt  ok
-        rai || dia && per  ok  erro
-        rai || dia && are  ok
-        rai || dia && vol  ok
-        rai dia  ok
-        alt per  ok
-        alt are  ok
-        alt vol  ok
-        per || rai are  ok
-        per || rai vol  ok
-        are vol  erro ok
-    */
 
     function exibir(){
         if(altura){
