@@ -222,7 +222,25 @@ function calcular(){
 }
 
 function limpar(){
-    location.reload()
+    if(altura){
+        altura.value = false
+    }
+    if(raio){
+        raio.value = false
+    }
+    if(diametro){
+        diametro.value = false
+    }
+    if(perimetro){
+        perimetro.value = false
+    }
+    if(area){
+        area.value = false
+        
+    }
+    if(volume){
+        volume.value = false
+    }
 }
 function erro_parametros_combinaveis(){
     var lblerroParametro = document.createElement('label')

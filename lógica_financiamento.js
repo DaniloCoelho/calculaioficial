@@ -25,6 +25,7 @@ var valor_parcela= document.getElementById('Valor_Parcela')
 var iof= document.getElementById('IOF')
 var piof= document.getElementById('PIOF')
 var custoet= document.getElementById('CET')
+var control = false
 if(document.getElementById('opcoes')){
     var opcoes = document.getElementById('opcoes')
     var opcao = opcoes.value
@@ -789,7 +790,47 @@ function calcular(){
     }   
 }
 function limpar(){//checa se existe o campo e valor e limpa
-    location.reload()
+    if(control){
+        location.reload()
+    }else{
+        if(document.getElementById('ValorFinanciado')){
+            document.getElementById('ValorFinanciado').value = null
+            v_f = false
+            vf = false
+        }
+        if(document.getElementById('Nparcelas')){
+            document.getElementById('Nparcelas').value = null
+            n_p = false
+            np = false  
+        }
+        if(document.getElementById('TxJuros')){
+            document.getElementById('TxJuros').value = null
+            t_j = false
+            tj = false
+        }
+        if(document.getElementById('ValorParcela')){
+            document.getElementById('ValorParcela').value = null
+            v_p = false
+            vp = false
+        }
+        if(document.getElementById('Taxaadicional')){
+            document.getElementById('Taxaadicional').value = null
+            t_a = false
+            ta = false
+        }
+        if(document.getElementById('LabelMontanteTotal')){
+            document.getElementById('LabelMontanteTotal').innerHTML = ""
+            m_t.innerHTML= ""
+            document.getElementById('LabelIOF').innerHTML = ""
+            iof.innerHTML = ""
+            valor_parcela_iof.innerHTML = ""
+            piof.innerHTML = ""
+            document.getElementById('LabelCET').innerHTML = ""
+            custoet.innerHTML = ""
+        }
+    }
+    
+
 }
 function relatorio(){
     //exclui itens
@@ -801,6 +842,8 @@ function relatorio(){
     document.getElementById('relatorio').remove()
     //troca nome do botão
     document.getElementById('limpar').value = "Voltar"
+    control = true
+    
 
     //criar tr (linha), com parcelas e parcelas com IOF
     let table = document.createElement('table');
@@ -878,14 +921,17 @@ function relatorio(){
 
             tbody.appendChild(row_2);
         }
+        
    }
 }
 function voltar(){
     document.getElementById('relatorio').value = "ok"
+    location.reload()
 }
 function exibir_price(){
     var labelmontante = document.getElementById('LabelMontanteTotal')
     labelmontante.innerHTML = "Montante sem IOF"
+    m_t.classList = "fonte_sizeprice"
     m_t.innerHTML= mt.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})+"  "
     var labeliof = document.getElementById('LabelIOF')
     labeliof.innerHTML = "IOF"
@@ -899,6 +945,7 @@ function exibir_price(){
 function exibir_sac(){
     var labelmontante = document.getElementById('LabelMontanteTotal')
     labelmontante.innerHTML = "Montante sem IOF"
+    m_t.classList = "fonte_sizeprice"
     m_t.innerHTML= mt.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})+"  "
     var labeliof = document.getElementById('LabelIOF')
     labeliof.innerHTML = "IOF"
@@ -907,7 +954,7 @@ function exibir_sac(){
     labelcet.innerHTML = "CET"
     custoet.innerHTML = cet.toFixed(3)+"%"
     valor_parcela.innerHTML = "Valor 1° parcela sem IOF"
-    valor_parcela_iof.innerHTML = "Valor 1° parcela com IOF"
+    valor_parcela_iof.innerHTML = "1° parcela com IOF"
     piof.innerHTML = parcelasiof[0].toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})+"  "
 }
 function opcaops(){

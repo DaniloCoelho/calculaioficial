@@ -37,13 +37,6 @@ function calcular(){
         var tang_b = document.getElementById('tangenteb')
         var tan_b = Number(tang_b.value)
     }
-    //hipotenusa e tangente hi tan_a tan_b ok
-    //cateto b e sen a ok
-    //cateto a e sen b ?
-    //cateto a e cos a ?
-    //cateto b e cos b ok
-    //cos a e cos b ok
-    //sen a e sen b
     if((hi && (tan_a || tan_b)|| tan_a && tan_b) && !cb && !ca && !sen_a && !sen_b && !cos_a && !cos_b){
         erro_parametros_combinaveis()
     }
@@ -142,22 +135,32 @@ function calcular(){
         }
     
         area = (cb * ca /2).toFixed(3)
-    
-        hip.value = hi
-        c_a.value = ca
-        c_b.value = cb
-        seno_a.value = sen_a
-        seno_b.value = sen_b
-        cosse_a.value = cos_a
-        cosse_b.value = cos_b
-        tang_a.value = tan_a
-        tang_b.value = tan_b
+        hip.value = hi.toFixed(3)
+        c_a.value = ca.toFixed(3)
+        c_b.value = cb.toFixed(3)
+        seno_a.value = sen_a.toFixed(3)
+        seno_b.value = sen_b.toFixed(3)
+        cosse_a.value = cos_a.toFixed(3)
+        cosse_b.value = cos_b.toFixed(3)
+        tang_a.value = tan_a.toFixed(3)
+        tang_b.value = tan_b.toFixed(3)
         exibir_area()
     } 
 }
 
 function limpar(){
-    location.reload()
+    document.getElementById('cateto_b').value = null
+    document.getElementById('cateto_a').value = null
+    document.getElementById('hipotenusa').value = null
+    document.getElementById('senoa').value = null
+    document.getElementById('senob').value = null
+    document.getElementById('cossenoa').value = null
+    document.getElementById('cossenob').value = null
+    document.getElementById('tangentea').value = null
+    document.getElementById('tangenteb').value = null
+    document.getElementById('tr1').remove()
+    
+
 }
 function erro_parametros_combinaveis(){
     var lblerroParametro = document.createElement('label')
@@ -182,6 +185,7 @@ function exibir_area(){
     var lblarea1 = document.createElement('label')
     var table1 = document.getElementById('table1')
     var tr1 = document.createElement('tr')
+    tr1.id = "tr1"
     var td1 = document.createElement('td')
     var td2 = document.createElement('td')
 

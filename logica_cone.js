@@ -36,17 +36,6 @@ function calcular(){
     }
     var control = false
 
-     /*
-        ab = pi * r**2
-        al = pi * r * g
-        at = ab * al
-
-        v= (1/3) * ab * h
-
-        g**2 = a**2 + b**2
-
-    */
-
     if((rai || dia || per) && (alt || ger) && !are && !vol && !control){
         if(alt){
             if(rai){
@@ -129,8 +118,6 @@ function calcular(){
         }
         else{
             if(rai){
-                //are = (pi*(rai**2)) + (pi*rai*alt)
-                //alt = are - (pi*(rai**2)) /pi * rai
                 alt = (are - (pi*(rai**2)))/(pi*rai)
                 per = 2* pi * rai
                 vol=  (1/3) * pi* (rai**2) * alt
@@ -250,7 +237,6 @@ function calcular(){
                 vol=  (1/3) * pi* (rai**2) * alt
                 are = (pi*(rai**2)) + (pi*rai*alt)
                 
-                
             }else if(dia){
                 rai = dia / 2
                 alt = Math.sqrt(ger**2 + rai**2)
@@ -266,7 +252,6 @@ function calcular(){
                 are = (pi*(rai**2)) + (pi*rai*alt)
             }
         }
-        
         if(rai <0 || dia<0 || per<0 || are<0 || alt<0 || vol<0 || ger<0){
             erro_negativos()
         }else{
@@ -339,10 +324,12 @@ function calcular(){
         var areadabase = pi * (rai**2)
         var areadalateral = pi * rai * alt
         var lblareabase = document.createElement('label')
+        lblareabase.id = "lblareabase"
         lblareabase.classList= "caixa"
         lblareabase.innerHTML = "Área da base = " + areadabase.toFixed(2) + "u<sup>2<sup>" + "<br>"
         campos.appendChild(lblareabase)
         var lblarealateral = document.createElement('label')
+        lblarealateral.id = "lblarealateral"
         lblarealateral.classList= "caixa"
         lblarealateral.innerHTML = "Área da lateral = " + areadalateral.toFixed(2) + "u<sup>2<sup>"
         campos.appendChild(lblarealateral)
@@ -352,7 +339,39 @@ function calcular(){
 }
 
 function limpar(){
-    location.reload()
+    if(altura){
+        altura.value = null
+    }
+    if(raio){
+        raio.value = null
+    }
+    if(diametro){
+        diametro.value = null
+
+    }
+    if(perimetro){
+        perimetro.value = null
+    }
+    if(area){
+        area.value = null
+        
+    }
+    if(volume){
+        volume.value = null
+    }
+    if(geratriz){
+        geratriz.value = null
+    }
+    if(document.getElementById('lblareabase')){
+        document.getElementById('lblareabase').remove()
+    }
+    if(document.getElementById('lblarealateral')){
+        document.getElementById('lblarealateral').remove()
+    }
+    
+    
+    
+    
 }
 function erro_parametros_combinaveis(){
     var lblerroParametro = document.createElement('label')

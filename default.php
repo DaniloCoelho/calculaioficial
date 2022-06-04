@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="slide.css">
     <title>Calcular</title>
 </head>
 <body>
@@ -38,33 +39,45 @@
                 <!--anuncio-->
             </div>
             <div class="calculadora" id="calculadora" style="background-color: rgb(255, 255, 255);box-shadow:none;" >
-                <a href="financiamento.html"><img src="img/calcfinan.png" alt="" id="foto" class="img" style="max-width: 80%; margin: auto;">
-                </a>
-                <p>
-                    Com esta calculadora é possível fazer simulações e descobrir qual a taxa de juros , qual valor financiado , custo CET , qual valor da parcela , montante e até número de parcelas . Entre e simule !!!</p>
-                <div class="linha"></div>
-                <a href="valor_futuro.html"><img src="img/calcaporte.png" alt="" id="foto" class="img" style="max-width: 80%; margin: auto;">
-                </a>
-                <p>
-                    Com esta calculadora é possível fazer simulações e descobrir valores de investimentos , existem  várias formas de simular ,com aporte inicial ,mensal ou anual , ou juntos. É possível descobrir o montante , número de meses , valor do investimento  e até a taxa de crescimento . Entre e simule !!!
-                </p>
-                <div class="linha"></div>
-                <a href="combustivel.html"><img src="img/calccombus.png" alt="" id="foto" class="img" style="max-width: 80%; margin: auto;">
-                </a>
-                <p>
-                    Com esta calculadora é possível simular e descobrir qual valor gasto , qual valor do combustível , quantos litros é necessário para realizar um percurso , quantos quilômetros é possível percorrer ,qual valor do litro e até o consumo.
-                    Entre e simule !!!
-                </p>
-                <div class="linha"></div>
-                <a href="pitagoras2.html"><img src="img/calctrigono.png" alt="" id="foto" class="img" style="max-width: 80%; margin: auto;">
-                </a>
-                <p>
-                    Com esta calculadora é possivel descobrir e simular a hipotenusa , catetos , seno ,cosseno ,tangente e até a área de um triângulo retângulo.
-                    Entre e simule !!!
-                </p>
-                
-                
+            <div class="slider">
+        <div class="slides" >
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="img/calcaporte.png" alt="aporte">
+                <label for="img/calcaporte.png">aaaa</label>
             </div>
+            <div class="slide">
+                <img src="img/calccombus.png" alt="aporte2">
+            </div>
+            <div class="slide">
+                <img src="img/calcfinan.png" alt="aporte3">
+            </div>
+            <div class="slide">
+                <img src="img/calctrigono.png" alt="aporte4">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="autobtn1"></div>
+                <div class="autobtn2"></div>
+                <div class="autobtn3"></div>
+                <div class="autobtn4"></div>   
+            </div>
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+        
+
+    </div>
+                
             <div class="div_anuncio">
                 <!--anuncio-->
             </div>
@@ -82,5 +95,6 @@
 
     </div>
     <script src="logica.js"></script>
+    <script src="slide.js"></script>
 </body>
 </html>

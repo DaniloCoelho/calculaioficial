@@ -80,7 +80,7 @@ function calcular(){
     }
 
     function exibir(){
-        if(raio){
+        if(raio || rai){
             raio.value = rai.toFixed(2)
         }
         else{
@@ -89,6 +89,7 @@ function calcular(){
         }
         if(diametro){
             diametro.value = dia.toFixed(2)
+            
     
         }else{
             diametro = document.getElementById('diametro')
@@ -114,7 +115,34 @@ function calcular(){
 }
 
 function limpar(){
-    location.reload()
+    //location.reload()
+    if(raio){
+        raio.value = false
+    }
+    /*else{
+        raio = document.getElementById('raio')
+        raio.value = rai.toFixed(2)
+    }*/
+    if(diametro){
+        diametro.value = false
+    }/*else{
+        diametro = document.getElementById('diametro')
+        diametro.value = dia.toFixed(2)   
+    }*/
+    if(perimetro){
+        perimetro.value = false
+    }
+    /*else{
+        perimetro = document.getElementById('perimetro')
+        perimetro.value = per.toFixed(2)
+    }*/
+    if(area){
+        area.value = false   
+    }
+    /*else{
+        area = document.getElementById('area')
+        area.value = are.toFixed(2)
+    }*/
 }
 function erro_parametros_combinaveis(){
     var lblerroParametro = document.createElement('label')

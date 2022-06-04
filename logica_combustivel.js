@@ -10,6 +10,16 @@ var control = false
 
 function calcular(){
     
+    if(document.getElementById('kmr')){
+        document.getElementById('kmr').remove()
+    }
+    if(document.getElementById('txt')){
+        document.getElementById('txt').remove()
+    }
+    if(document.getElementById('txt1')){
+        document.getElementById('txt1').remove()
+    }
+    
     opcao = opcoes.value
     if (opcao == "gasolina"){
         vc = 7.283
@@ -178,31 +188,75 @@ function calcular(){
         v_l.value = vl.toFixed(3)
         v_tot.value = vtot.toFixed(2)
         var kmr = document.createElement('label')
+        kmr.id = "kmr"
         kmr.innerHTML = "Valor por quilômetro rodado R$" + (vtot / qui).toFixed(2)
         kmr.classList = "caixa"
         campos.appendChild(kmr)
     }
 }
 function limpar(){
-    location.reload()
+    //location.reload()
+    if(document.getElementById('Valorporlitro')){
+        document.getElementById('Valorporlitro').value = null
+        v_l = false
+        vl = false
+    }
+    if(document.getElementById('Qtdddelitros')){
+        document.getElementById('Qtdddelitros').value = null
+        q_l = false
+        ql = false
+        
+    }
+    if(document.getElementById('Quilomêtros')){
+        document.getElementById('Quilomêtros').value = null
+        quil = false
+        qui = false
+        
+    }
+    if(document.getElementById('Kmporlitro')){
+        document.getElementById('Kmporlitro').value = null
+        km_l = false
+        kml = false
+        
+    }
+    if(document.getElementById('Valortotal')){
+        document.getElementById('Valortotal').value = null
+        v_tot = false
+        vtot = false
+        
+    }
+    if(document.getElementById('kmr')){
+        document.getElementById('kmr').innerHTML = ""
+        kmr = false
+    }
+    
+    if(document.getElementById('txt')){
+        document.getElementById('txt').innerHTML = ""
+    }
+    if(document.getElementById('txt1')){
+        document.getElementById('txt1').innerHTML = ""
+    }
+    
 }
 function erroparametro(){
     var txt = document.createElement('label')
     txt.classList = "erro"
-    txt.innerHTML = "Não é possível realizar operação com esse parâmetro "
+    txt.id = "txt"
+    txt.innerHTML = "Não é possível realizar operação com esse parâmetro <br>"
     campos.appendChild(txt)
 }
 function teste_n_parametros(){
-    var txt = document.createElement('label')
-    txt.classList = "erro"
+    var txt1 = document.createElement('label')
+    txt1.id = "txt1"
+    txt1.classList = "erro"
     if(erroqtdd>4){
-        txt.innerHTML = "Não é possível realizar  esta operação, insira no maximo 4 parâmetros. "
-        campos.appendChild(txt)
+        txt1.innerHTML = "Não é possível realizar  esta operação, insira no maximo 4 parâmetros. <br>"
+        campos.appendChild(txt1)
         control = true
     }
     if(erroqtdd = 0){
-        txt.innerHTML = "Não é possível realizar esta operação, insira no minímo 1 parâmetros. "
-        campos.appendChild(txt)
+        txt1.innerHTML = "Não é possível realizar esta operação, insira no minímo 1 parâmetros. <br>"
+        campos.appendChild(txt1)
         control = true
     }
 }
