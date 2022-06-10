@@ -108,9 +108,9 @@
                         <td>Tem seguro ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="seguro" id="S_decimo" class="campo" value="" checked>
+                            <input type="radio" name="seguro" id="S_decimo" class="campo" value="" onclick="displayvisible(document.getElementById('seguroanual'))" checked>
                             <label for="radio">Não</label>
-                            <input type="radio" name="seguro" id="N_decimo">
+                            <input type="radio" name="seguro" onclick="displaynone(document.getElementById('seguroanual'))">
                         </td>
                     </tr><tr id="seguroanual">
                         <td>Valor anual</td>
@@ -119,11 +119,11 @@
                         <td>Tem custo com locomoção ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="locomocao" id="" class="campo" value="" checked>
+                            <input type="radio" name="locomocao" id="" class="campo" value="" onclick="displayvisible(document.getElementById('trcustodiario'))" checked>
                             <label for="radio">Não</label>
-                            <input type="radio" name="locomocao" id="">
+                            <input type="radio" name="locomocao" id="" onclick="displaynone(document.getElementById('trcustodiario'))">
                         </td>
-                    </tr><tr>
+                    </tr><tr id="trcustodiario">
                         <td>Custo diário</td>
                         <td><input type="number" name="" id="custodiariolocomocao" class="campo"></td>
                     </tr><tr>
