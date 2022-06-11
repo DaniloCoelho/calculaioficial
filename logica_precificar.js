@@ -90,6 +90,41 @@ function calcular(){
     }else if(checkprev[1].checked){
         previsaomensal = 0
     }
+    if(checkveiculo[0].checked){
+        
+    }else if(checkveiculo[1].checked){
+        
+    }
+    if(checkseguro[0].checked){
+        
+    }else if(checkseguro[1].checked){
+        
+    }
+    if(checklocomocao[0].checked){
+        
+    }else if(checklocomocao[1].checked){
+        
+    }
+    if(checkajudante[0].checked){
+        
+    }else if(checkajudante[1].checked){
+        
+    }
+    if(checkferramenta[0].checked){
+        
+    }else if(checkferramenta[1].checked){
+        
+    }
+    if(checkimovel[0].checked){
+        
+    }else if(checkimovel[1].checked){
+        
+    }
+    if(checkcontas[0].checked){
+        
+    }else if(checkcontas[1].checked){
+        
+    }
 
     somatotalano = somatotalano + decimo + ferias + previsaomensal
     
