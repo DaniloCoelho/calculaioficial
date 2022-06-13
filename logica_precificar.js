@@ -1,7 +1,7 @@
 var campos = document.getElementById('campos')
 var decimo = 0
 var ferias = 0
-var somatotalano = 0
+var somatotalano = []
 
 function calcular(){
     if(document.getElementById('salariopretendido')){
@@ -75,20 +75,18 @@ function calcular(){
 
     if(checkdecimo[0].checked){
         decimo = salpret
-    }else if(checkdecimo[1].checked){
-        decimo = 0
+        somatotalano.push(decimo)
     }
     if(checkferias[0].checked){
         ferias = (salpret/3)+ salpret
-        somatotalano = (salpret * 11)
+        somatotalano.push(salpret * 11)
+        somatotalano.push(ferias)
     }else if(checkferias[1].checked){
-        ferias = 0
-        somatotalano = (salpret * 12)
+        somatotalano.push(salpret * 12)
     }
     if(checkprev[0].checked){
         previsaomensal = previsaomensal*12
-    }else if(checkprev[1].checked){
-        previsaomensal = 0
+        somatotalano.push(previsaomensal)
     }
     if(checkveiculo[0].checked){
         
