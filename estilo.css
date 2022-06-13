@@ -47,7 +47,8 @@ h1{
     padding: 2px;
     margin: auto;
     border-radius: 4px;
-    
+    background-color:rgb(255, 255, 255);
+    border-bottom-color: blue;
 }
 .caixa{
     max-width: 600px;
