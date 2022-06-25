@@ -179,6 +179,12 @@ function calcular(){
     }
     
     
+    document.getElementById('table1').style="display:none;"
+    document.getElementById('titulo').innerHTML= "Valor a ser cobrado."
+    document.getElementById('foto').style="display:none;"
+    document.getElementById('btncalc').style="display:none;"
+    //document.getElementById('btnlimpar').style="display:none;"
+    document.getElementById('btnlimpar').value ="Voltar"
     let table = document.createElement('table');
     let thead = document.createElement('thead');
     let tbody = document.createElement('tbody');
@@ -212,6 +218,7 @@ function calcular(){
 
     let row2 = document.createElement('tr');
     row2.classList = "tabelapar"
+    row2.style= "font-size:22px;color:green;font-weight: bold;"
     let row2_data_1 = document.createElement('td');
     row2_data_1.innerHTML = " Total ";
     let row2_data_2 = document.createElement('td');
@@ -500,6 +507,9 @@ function calcular(){
     row14.appendChild(row14_data_5);
 
     tbody.appendChild(row14);
+
+    document.createElement('br')
+    document.getElementById('calculadora').appendChild(document.createElement('br'))
 
 
 }
