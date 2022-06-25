@@ -15,20 +15,20 @@
                 <label class="logo">Calcule aí!</label>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a>Calculadoras</a>
+                    <li><a>Calculadoras&#9662;</a>
                         <ul>
                             <li class="label_dropdown">Financeiro</li>
-                            <br>
+                            
                             <li><a href="financiamento.html">Financiamentos</a></li>
-                            <br>
-                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
-                            <li><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
+                            
+                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                            <li><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
                             <li class="label_dropdown"> Geometria </li>
-                            <br>
-                            <li><a href="cilindro.html">Cilindro</a></li><br>
-                            <li><a href="circulo.html">Circulo</a></li><br>
-                            <li><a href="cone.html">Cone</a></li><br>
-                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
+                            
+                            <li><a href="cilindro.html">Cilindro</a></li>
+                            <li><a href="circulo.html">Circulo</a></li>
+                            <li><a href="cone.html">Cone</a></li>
+                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
                             
                         </ul>
                         
@@ -45,7 +45,7 @@
                 <!--anuncio-->
             </div>
             <div class="linha"></div>
-            <div class="calculadora" style="font-size: 12px;">
+            <div class="calculadora" style="font-size: 12px;" id="calculadora">
                 <h1>Precificar seu trabalho</h1>
                 <img src="img/cilindro.png" alt="">
                 <table class="caixa" id="table1">
@@ -63,114 +63,134 @@
                         <td>Deseja 13° salário ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="decimo" id="S_decimo" class="campo" value="" checked>
+                            <input type="radio" name="decimo" class="campo" value="">
                             <label for="radio">Não</label>
-                            <input type="radio" name="decimo" id="N_decimo">
+                            <input type="radio" name="decimo" checked>
 
                         </td>
                     </tr><tr>
                         <td>Deseja férias ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="ferias" id="S_ferias" class="campo" value="" checked onclick="displayvisible(document.getElementById('diasdeferias'))">
+                            <input type="radio" name="ferias" class="campo" value="" onclick="displayvisible(document.getElementById('diasdeferias'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="ferias" id="N_ferias" onclick="displaynone(document.getElementById('diasdeferias'))">
+                            <input type="radio" name="ferias" id="N_ferias" onclick="displaynone(document.getElementById('diasdeferias'))" checked>
                         </td>
-                    </tr><tr id="diasdeferias">
+                    </tr><tr id="diasdeferias" style="display: none;">
                         <td>Dias de férias</td>
-                        <td><input type="number" name="" class="campo" id="diasferias"></td>
+                        <td>
+                            <select name="" id="ferias1530" class="botao">
+                                <option value="15">15 dias</option>
+                                <option value="30">30 dias</option>
+                            </select>
+                        </td>
                     </tr><tr>
                         <td>Plano de previdência</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="previdencia" id="S_decimo" class="campo" value="" checked onclick="displayvisible(document.getElementById('valorprev'))">
+                            <input type="radio" name="previdencia" class="campo" value="" onclick="displayvisible(document.getElementById('valorprev'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="previdencia" id="N_decimo" onclick="displaynone(document.getElementById('valorprev'))">
+                            <input type="radio" name="previdencia" onclick="displaynone(document.getElementById('valorprev'))" checked>
                         </td>
-                    </tr><tr  id="valorprev">
+                    </tr><tr  id="valorprev" style="display: none;">
                         <td>Valor mensal</td>
                         <td><input type="number" name="" id="prevmensal" class="campo"></td>
                     </tr><tr>
                         <td>Utiliza veículo ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="veiculo" id="S_decimo" class="campo" value="" checked onclick="displayvisible(document.getElementById('valorveiculo')),displayvisible(document.getElementById('anoveiculo')),displayvisible(document.getElementById('temseguro')), displayvisible(document.getElementById('seguroanual'))">
+                            <input type="radio" name="veiculo" class="campo" value="" onclick="displayvisible(document.getElementById('valorveiculo')),displayvisible(document.getElementById('anoveiculo')),displayvisible(document.getElementById('temseguro'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="veiculo" id="N_decimo" onclick="displaynone(document.getElementById('valorveiculo')),displaynone(document.getElementById('anoveiculo')), displaynone(document.getElementById('temseguro')), displaynone(document.getElementById('seguroanual'))">
+                            <input type="radio" name="veiculo" onclick="displaynone(document.getElementById('valorveiculo')),displaynone(document.getElementById('anoveiculo')), displaynone(document.getElementById('temseguro'))" checked>
                         </td>
-                    </tr><tr id="valorveiculo">
+                    </tr><tr id="valorveiculo" style="display: none;">
                         <td>Valor (FIPE) do veículo</td>
                         <td><input type="number" name="" id="v_veiculo" class="campo"></td>
-                    </tr><tr id="anoveiculo">
-                        <td>Ano do carro</td>
-                        <td><input type="number" name="" id="a_carro" class="campo"></td>
-                    </tr><tr id="temseguro">
+                    </tr><tr id="anoveiculo" style="display: none;">
+                        <td>Veículo tem mais de 20 anos </td>
+                        <td>
+                            <label for="radio">Sim</label>
+                            <input type="radio" name="20anos" class="campo" value="">
+                            <label for="radio">Não</label>
+                            <input type="radio" name="20anos" checked>
+                        </td>
+                    </tr><tr id="temseguro" style="display: none;">
                         <td>Tem seguro ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="seguro" id="S_decimo" class="campo" value="" onclick="displayvisible(document.getElementById('seguroanual'))" checked>
+                            <input type="radio" name="seguro" class="campo" value="" onclick="displayvisible(document.getElementById('seguroanual'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="seguro" onclick="displaynone(document.getElementById('seguroanual'))">
+                            <input type="radio" name="seguro" onclick="displaynone(document.getElementById('seguroanual'))" checked>
                         </td>
-                    </tr><tr id="seguroanual">
+                    </tr><tr id="seguroanual" style="display: none;">
                         <td>Valor anual</td>
                         <td><input type="number" name="" id="v_seg_anual" class="campo"></td>
                     </tr><tr>
                         <td>Tem custo com locomoção ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="locomocao" id="" class="campo" value="" onclick="displayvisible(document.getElementById('trcustodiario'))" checked>
+                            <input type="radio" name="locomocao" id="" class="campo" value="" onclick="displayvisible(document.getElementById('trcustodiario'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="locomocao" id="" onclick="displaynone(document.getElementById('trcustodiario'))">
+                            <input type="radio" name="locomocao" id="" onclick="displaynone(document.getElementById('trcustodiario'))" checked>
                         </td>
-                    </tr><tr id="trcustodiario">
+                    </tr><tr id="trcustodiario" style="display: none;">
                         <td>Custo diário</td>
                         <td><input type="number" name="" id="custodiariolocomocao" class="campo"></td>
                     </tr><tr>
-                        <td>Custo diário com refeição</td>
-                        <td><input type="number" name="" id="custodiariorefeicao" class="campo"></td>
-                    </tr><tr>
-                        <td>Tem ajudandte freelancer ?</td>
+                        <td>Custo com refeição</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="ajudante" id="" class="campo" value="" checked>
+                            <input type="radio" name="refeicao" id="" class="campo" value="" onclick="displayvisible(document.getElementById('diariorefeicao'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="ajudante" id="">
+                            <input type="radio" name="refeicao" id="" onclick="displaynone(document.getElementById('diariorefeicao'))" checked>
                         </td>
-                    </tr><tr>
+                    </tr><tr id="diariorefeicao" style="display: none;">
+                        <td>Custo diário</td>
+                        <td><input type="number" name="" id="custodiariorefeicao" class="campo"></td>
+
+                    </tr>
+                    <tr>
+                        <td>Tem ajudante freelancer ?</td>
+                        <td>
+                            <label for="radio">Sim</label>
+                            <input type="radio" name="ajudante" id="" class="campo" value="" onclick="displayvisible(document.getElementById('diariaajudante'))">
+                            <label for="radio">Não</label>
+                            <input type="radio" name="ajudante" id="" onclick="displaynone(document.getElementById('diariaajudante'))" checked>
+                        </td>
+                    </tr><tr id="diariaajudante" style="display: none;">
                         <td>Custo diário</td>
                         <td><input type="number" name="" id="custodiariofreelancer" class="campo"></td>
                     </tr><tr>
                         <td>Manutenção de ferramenta ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="ferramenta" id="" class="campo" value="" checked>
+                            <input type="radio" name="ferramenta" id="" class="campo" value="" onclick="displayvisible(document.getElementById('mensalferramenta'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="ferramenta" id="">
+                            <input type="radio" name="ferramenta" id="" onclick="displaynone(document.getElementById('mensalferramenta'))" checked>
                         </td>
-                    </tr><tr>
+                    </tr><tr id="mensalferramenta" style="display: none;">
                         <td>Valor mensal</td>
                         <td><input type="number" name="" id="valormanumensal" class="campo"></td>
                     </tr><tr>
                         <td>Custo com imóvel ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="imovel" id="S_decimo" class="campo" value="" checked>
+                            <input type="radio" name="imovel" class="campo" value="" onclick="displayvisible(document.getElementById('mensalimovel'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="imovel" id="N_decimo">
+                            <input type="radio" name="imovel" onclick="displaynone(document.getElementById('mensalimovel'))" checked>
                         </td>
-                    </tr><tr>
+                    </tr><tr id="mensalimovel" style="display: none;">
                         <td>Valor mensal</td>
                         <td><input type="number" name="" id="valormensalimovel" class="campo"></td>
                     </tr><tr>
                         <td>Custo com água , luz e telefonia ?</td>
                         <td>
                             <label for="radio">Sim</label>
-                            <input type="radio" name="contas" id="S_decimo" class="campo" value="" checked>
+                            <input type="radio" name="contas" class="campo" value="" onclick="displayvisible(document.getElementById('mensalconta'))">
                             <label for="radio">Não</label>
-                            <input type="radio" name="contas" id="N_decimo">
+                            <input type="radio" name="contas" onclick="displaynone(document.getElementById('mensalconta'))" checked>
                         </td>
-                    </tr><tr>
+                    </tr><tr id="mensalconta" style="display: none;">
                         <td>Valor mensal</td>
                         <td><input type="number" name="" id="valormensalcontas" class="campo"></td>
 
