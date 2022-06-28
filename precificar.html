@@ -11,24 +11,27 @@
 <body>
     <div class="fundo">
         <div>
-            <nav>
+            <nav style="z-index:10 ; clear: both;">
                 <label class="logo">Calcule aí!</label>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
                     <li><a>Calculadoras&#9662;</a>
                         <ul>
-                            <li class="label_dropdown">Financeiro</li>
+                            <li class="label_dropdown">Financeiro</li><br>
                             
-                            <li><a href="financiamento.html">Financiamentos</a></li>
+                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li><br>
                             
-                            <li><a href="valor_futuro.html">Valor Futuro de capital</a></li>
-                            <li><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
+                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
+                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li><br>
                             <li class="label_dropdown"> Geometria </li>
                             
-                            <li><a href="cilindro.html">Cilindro</a></li>
-                            <li><a href="circulo.html">Circulo</a></li>
-                            <li><a href="cone.html">Cone</a></li>
-                            <li><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li><br>
+                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li><br>
+                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li><br>
+                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
                             
                         </ul>
                         
@@ -45,7 +48,7 @@
                 <!--anuncio-->
             </div>
             <div class="linha"></div>
-            <div class="calculadora" style="font-size: 12px;" id="calculadora">
+            <div class="calculadora" id="calculadora">
                 <h1 id="titulo">Precificar seu trabalho</h1>
                 <img src="img/cilindro.png" id="foto">
                 <table class="caixa" id="table1">
@@ -212,36 +215,35 @@
             <!--anuncio-->
         </div>
         <div class="rodape" style="margin: auto; text-align: left;">
-            <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .</p>
+            <p>
+                Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .
+            </p>
             <h1>Metodologia Precificação</h1>
                 <br>
-                <p> Nessa ferrramenta usamos as relações de cálculos de circulos e cilindros. </p>
                 <p>
-                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto cilíndrico e calcular volume de objetos .
+                    Nesta calculadora a intenção é calcular o valor da hora de seu trabalho ,ou também a diária . É de suma importância saber que o tempo de locomoção também é contado como hora de trabalho . Exemplo; Gasto 1 hora para ir até o local de serviço e 3 horas pra realizar o serviço e mais 1 hora de retornar , então devo cobrar por 5 horas .
                 </p>
                 <p>
-                    O usuário deve inserir pelo menos dois parâmetros para calcular todos os outros .
+                    Nesta ferrramenta usamos o valor de todos os gastos mensais e diários e somamos todos anualmente. Após isso o resultado é dividido por meses , dia e horas de trabalho . Onde o período de férias não são computados nessa divisão .
                 </p>
                 <br>
-                São usadas as fórmulas:
-                <br>
-                <br>
-                Volume = &pi; . raio<sup>2</sup> . altura
-                <br>
-                Área da superfície = 2 . &pi; . altura + 2 . &pi; . raio<sup>2</sup>
-                <br>
-                Perímetro ou circuferência = 2 . &pi; . raio
-                <br>
-                Diâmetro = 2 . raio
-                <br>
                 <p>
-                    O cálculo da área da superfície (2 * área da base + área lateral da superfície) é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
+                    O valor de férias é proporcionalmente ao salário + 1/3 de seu valor .
                 </p>
                 <p>
-                    O cálculo de volume é medido em unidade ao cubo (u<sup>3</sup>) e retornado ao usuário .
+                    Exemplo: Se houver 1 mês de folga no ano , o gasto com locomoção diário , será convertido para mensal e multiplicado por meses de trabalho que é equivalente a 11 . Já gastos com imóvel e seguro automotivo equivale a 12 meses , indepedente de meses de trabalho. 
+                    
                 </p>
                 <p>
-                    Essa ferramenta necessita de dois parâmetros ou mais que possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,é preciso observar essas hipóteses .
+                    o IPVA é utilizado o equivale a 4% da tabela FIPE do valor do automóvel .
+                </p>
+                <p>
+                    No caso de depreciação é considerado um valor de 5% ao ano.
+                    
+                </p>
+                <br>
+                <p>
+                    Essa ferramenta necessita de três parâmetros para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como um gasto ser negativo ,é preciso observar essas hipóteses .
                 </p>
         </div>
 

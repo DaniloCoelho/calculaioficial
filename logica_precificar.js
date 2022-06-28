@@ -26,10 +26,7 @@ function calcular(){
         var horasdetrabalho = document.getElementById('horasdetrabalho')
         var horastrabalho = Number(horasdetrabalho.value)
     }
-    if(document.getElementById('diasdeferias')){
-        var diasdeferias = document.getElementById('diasdeferias')
-        var diasferias = Number(diasdeferias.value)
-    }
+    
     if(document.getElementById('prevmensal')){
         var prevmensal = document.getElementById('prevmensal')
         var previsaomensal = Number(prevmensal.value)
@@ -38,10 +35,7 @@ function calcular(){
         var v_veiculo = document.getElementById('v_veiculo')
         var valorveiculo = Number(v_veiculo.value)
     }
-    if(document.getElementById('a_carro')){
-        var a_carro = document.getElementById('a_carro')
-        var anocarro = Number(a_carro.value)
-    }
+    
     if(document.getElementById('v_seg_anual')){
         var v_seg_anual = document.getElementById('v_seg_anual')
         var vseganual = Number(v_seg_anual.value)
@@ -70,7 +64,7 @@ function calcular(){
         var valormensalcontas = document.getElementById('valormensalcontas')
         var vmensalcontas = Number(valormensalcontas.value)
     }
-    var control = false
+    
     var checkdecimo = document.getElementsByName('decimo')
     var checkferias = document.getElementsByName('ferias')
     var checkprev = document.getElementsByName('previdencia')
@@ -177,344 +171,376 @@ function calcular(){
     for(var i = 0; i < ((somatotalano.length)); i++){
         somaano+= somatotalano[i]
     }
+    if(salpret>0 && diastrabalho>0 && horastrabalho>0){
+        document.getElementById('table1').style="display:none;"
+        document.getElementById('titulo').innerHTML= "Valor a ser cobrado."
+        document.getElementById('foto').style="display:none;"
+        document.getElementById('btncalc').style="display:none;"
+        //document.getElementById('btnlimpar').style="display:none;"
+        document.getElementById('btnlimpar').value ="Voltar"
+        let table = document.createElement('table');
+        let thead = document.createElement('thead');
+        let tbody = document.createElement('tbody');
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        document.getElementById('calculadora').appendChild(table);
     
+        // Creating and adding data to first row of the table
+        //criar um for
+        let row1 = document.createElement('tr');
+        row1.classList = "tabelaimpar"
+        let row_data_1 = document.createElement('td');
+        row_data_1.innerHTML = " Item ";
+        let row_data_2 = document.createElement('td');
+        row_data_2.innerHTML = " Valor total anual ";
+        let row_data_3 = document.createElement('td');
+        row_data_3.innerHTML = " Valor mensal ";
+        let row_data_4 = document.createElement('td');
+        row_data_4.innerHTML = " Valor diário ";
+        let row_data_5 = document.createElement('td');
+        row_data_5.innerHTML = " Valor por hora ";
+
+        row1.appendChild(row_data_1);
+        row1.appendChild(row_data_2);
+        row1.appendChild(row_data_3);
+        row1.appendChild(row_data_4);
+        row1.appendChild(row_data_5);
+        tbody.appendChild(row1);
+
+        //valor total
+        let row2 = document.createElement('tr');
+        row2.classList = "tabelaprincipal"
+        let row2_data_1 = document.createElement('td');
+        row2_data_1.innerHTML = " Total ";
+        let row2_data_2 = document.createElement('td');
+        row2_data_2.innerHTML = somaano.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+        let row2_data_3 = document.createElement('td');
+        row2_data_3.innerHTML = (somaano/12).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+        let row2_data_4 = document.createElement('td');
+        row2_data_4.innerHTML = ((somaano/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+        let row2_data_5 = document.createElement('td');
+        row2_data_5.innerHTML = (((somaano/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+        row2.appendChild(row2_data_1);
+        row2.appendChild(row2_data_2);
+        row2.appendChild(row2_data_3);
+        row2.appendChild(row2_data_4);
+        row2.appendChild(row2_data_5);
+        tbody.appendChild(row2);
+    ////salario/////////
+        let row3 = document.createElement('tr');
+        row3.classList = "tabelaimpar"
+        let row3_data_1 = document.createElement('td');
+        row3_data_1.innerHTML = " Salário ";
+        let row3_data_2 = document.createElement('td');
+        row3_data_2.innerHTML = (salpret*mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'});
+        let row3_data_3 = document.createElement('td');
+        row3_data_3.innerHTML = salpret.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'});
+        let row3_data_4 = document.createElement('td');
+        row3_data_4.innerHTML = (salpret/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+        let row3_data_5 = document.createElement('td');
+        row3_data_5.innerHTML = ((salpret/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+        row3.appendChild(row3_data_1);
+        row3.appendChild(row3_data_2);
+        row3.appendChild(row3_data_3);
+        row3.appendChild(row3_data_4);
+        row3.appendChild(row3_data_5);
+
+        tbody.appendChild(row3);
+
+    //////decimo terceiro///////
+
+        if(checkdecimo[0].checked){
+            let row4 = document.createElement('tr');
+            row4.classList = "tabelapar"
+            let row4_data_1 = document.createElement('td');
+            row4_data_1.innerHTML = "13° salário";
+            let row4_data_2 = document.createElement('td');
+            row4_data_2.innerHTML = decimo.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row4_data_3 = document.createElement('td');
+            row4_data_3.innerHTML = (decimo/mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row4_data_4 = document.createElement('td');
+            row4_data_4.innerHTML = ((decimo/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row4_data_5 = document.createElement('td');
+            row4_data_5.innerHTML = (((decimo/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row4.appendChild(row4_data_1);
+            row4.appendChild(row4_data_2);
+            row4.appendChild(row4_data_3);
+            row4.appendChild(row4_data_4);
+            row4.appendChild(row4_data_5);
+
+            tbody.appendChild(row4);
+
+        }
+        
+        ////////ferias
+        if(checkferias[0].checked){
+            let row5 = document.createElement('tr');
+            row5.classList = "tabelaimpar"
+            let row5_data_1 = document.createElement('td');
+            row5_data_1.innerHTML = "Férias";
+            let row5_data_2 = document.createElement('td');
+            row5_data_2.innerHTML = ferias.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row5_data_3 = document.createElement('td');
+            row5_data_3.innerHTML = (ferias/mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row5_data_4 = document.createElement('td');
+            row5_data_4.innerHTML = ((ferias/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row5_data_5 = document.createElement('td');
+            row5_data_5.innerHTML = (((ferias/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row5.appendChild(row5_data_1);
+            row5.appendChild(row5_data_2);
+            row5.appendChild(row5_data_3);
+            row5.appendChild(row5_data_4);
+            row5.appendChild(row5_data_5);
+            tbody.appendChild(row5);
+        }
+        /////previdencia
+
+        if(checkprev[0].checked){
+            let row6 = document.createElement('tr');
+            row6.classList = "tabelapar"
+            let row6_data_1 = document.createElement('td');
+            row6_data_1.innerHTML = "Previdência";
+            let row6_data_2 = document.createElement('td');
+            row6_data_2.innerHTML = previsaomensal.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'});
+            let row6_data_3 = document.createElement('td');
+            row6_data_3.innerHTML = (previsaomensal/mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row6_data_4 = document.createElement('td');
+            row6_data_4.innerHTML = ((previsaomensal/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row6_data_5 = document.createElement('td');
+            row6_data_5.innerHTML = (((previsaomensal/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row6.appendChild(row6_data_1);
+            row6.appendChild(row6_data_2);
+            row6.appendChild(row6_data_3);
+            row6.appendChild(row6_data_4);
+            row6.appendChild(row6_data_5);
+            tbody.appendChild(row6);
+        }
+        
+        
+        /////ipva + licenciamento
+
+        if(checkveiculo[0].checked){
+            let row7 = document.createElement('tr');
+            row7.classList = "tabelaimpar"
+            let row7_data_1 = document.createElement('td');
+            row7_data_1.innerHTML = "IPVA + Licenciamento";
+            let row7_data_2 = document.createElement('td');
+            row7_data_2.innerHTML = (ipva + licenciamento).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row7_data_3 = document.createElement('td');
+            row7_data_3.innerHTML = (((ipva + licenciamento)/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row7_data_4 = document.createElement('td');
+            row7_data_4.innerHTML = (((ipva + licenciamento)/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row7_data_5 = document.createElement('td');
+            row7_data_5.innerHTML = ((((ipva + licenciamento)/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row7.appendChild(row7_data_1);
+            row7.appendChild(row7_data_2);
+            row7.appendChild(row7_data_3);
+            row7.appendChild(row7_data_4);
+            row7.appendChild(row7_data_5);
+            tbody.appendChild(row7);
+
+            //depreciação
+
+            let row7_1 = document.createElement('tr');
+            row7_1.classList = "tabelapar"
+            let row7_1_data_1 = document.createElement('td');
+            row7_1_data_1.innerHTML = "Depreciação do automóvel";
+            let row7_1_data_2 = document.createElement('td');
+            row7_1_data_2.innerHTML = (valorveiculo * 0.05).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row7_1_data_3 = document.createElement('td');
+            row7_1_data_3.innerHTML = (((valorveiculo * 0.05)/mesestrabalho)).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row7_1_data_4 = document.createElement('td');
+            row7_1_data_4.innerHTML = (((valorveiculo * 0.05)/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row7_1_data_5 = document.createElement('td');
+            row7_1_data_5.innerHTML = ((((valorveiculo * 0.05)/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row7_1.appendChild(row7_1_data_1);
+            row7_1.appendChild(row7_1_data_2);
+            row7_1.appendChild(row7_1_data_3);
+            row7_1.appendChild(row7_1_data_4);
+            row7_1.appendChild(row7_1_data_5);
+            tbody.appendChild(row7_1);
+
+            if(checkseguro[0].checked){
+                ////seguro
+
+                let row8 = document.createElement('tr');
+                row8.classList = "tabelaimpar"
+                let row8_data_1 = document.createElement('td');
+                row8_data_1.innerHTML = "Seguro Automotivo";
+                let row8_data_2 = document.createElement('td');
+                row8_data_2.innerHTML = vseganual.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+                let row8_data_3 = document.createElement('td');
+                row8_data_3.innerHTML = (vseganual/mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+                let row8_data_4 = document.createElement('td');
+                row8_data_4.innerHTML = ((vseganual/mesestrabalho)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+                let row8_data_5 = document.createElement('td');
+                row8_data_5.innerHTML = (((vseganual/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+                row8.appendChild(row8_data_1);
+                row8.appendChild(row8_data_2);
+                row8.appendChild(row8_data_3);
+                row8.appendChild(row8_data_4);
+                row8.appendChild(row8_data_5);
+                tbody.appendChild(row8);
+            }
+        }
+        
+        ////locomoção
+
+        if(checklocomocao[0].checked){
+            let row9 = document.createElement('tr');
+            row9.classList = "tabelapar"
+            let row9_data_1 = document.createElement('td');
+            row9_data_1.innerHTML = "Locomoção";
+            let row9_data_2 = document.createElement('td');
+            row9_data_2.innerHTML = (custodialocomocao* mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row9_data_3 = document.createElement('td');
+            row9_data_3.innerHTML = (custodialocomocao).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row9_data_4 = document.createElement('td');
+            row9_data_4.innerHTML = ((custodialocomocao)/dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row9_data_5 = document.createElement('td');
+            row9_data_5.innerHTML = ((custodialocomocao/dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row9.appendChild(row9_data_1);
+            row9.appendChild(row9_data_2);
+            row9.appendChild(row9_data_3);
+            row9.appendChild(row9_data_4);
+            row9.appendChild(row9_data_5);
+            tbody.appendChild(row9);
+        }
+        ///refeição
+
+        if(checkrefeicao[0].checked){
+            let row10 = document.createElement('tr');
+            row10.classList = "tabelaimpar"
+            let row10_data_1 = document.createElement('td');
+            row10_data_1.innerHTML = "Refeição";
+            let row10_data_2 = document.createElement('td');
+            row10_data_2.innerHTML = (custodiarefeicao * mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'});
+            let row10_data_3 = document.createElement('td');
+            row10_data_3.innerHTML = custodiarefeicao.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row10_data_4 = document.createElement('td');
+            row10_data_4.innerHTML = (custodiarefeicao/ dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row10_data_5 = document.createElement('td');
+            row10_data_5.innerHTML =  ((custodiarefeicao/ dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row10.appendChild(row10_data_1);
+            row10.appendChild(row10_data_2);
+            row10.appendChild(row10_data_3);
+            row10.appendChild(row10_data_4);
+            row10.appendChild(row10_data_5);
+            tbody.appendChild(row10);
+        }
+        ////ajudante
+
+        if(checkajudante[0].checked){
+            let row11 = document.createElement('tr');
+            row11.classList = "tabelapar"
+            let row11_data_1 = document.createElement('td');
+            row11_data_1.innerHTML = "Ajudante";
+            let row11_data_2 = document.createElement('td');
+            row11_data_2.innerHTML = (custodiafreelancer * mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row11_data_3 = document.createElement('td');
+            row11_data_3.innerHTML = custodiafreelancer.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row11_data_4 = document.createElement('td');
+            row11_data_4.innerHTML = (custodiafreelancer/ dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row11_data_5 = document.createElement('td');
+            row11_data_5.innerHTML = ((custodiafreelancer/ dias_trabalho_mes)/ horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row11.appendChild(row11_data_1);
+            row11.appendChild(row11_data_2);
+            row11.appendChild(row11_data_3);
+            row11.appendChild(row11_data_4);
+            row11.appendChild(row11_data_5);
+            tbody.appendChild(row11);
+        }
+        ////manutenção
+
+        if(checkferramenta[0].checked){
+            let row12 = document.createElement('tr');
+            row12.classList = "tabelaimpar"
+            let row12_data_1 = document.createElement('td');
+            row12_data_1.innerHTML = "Manutenções ferramentas";
+            let row12_data_2 = document.createElement('td');
+            row12_data_2.innerHTML = (vmanumensal * mesestrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row12_data_3 = document.createElement('td');
+            row12_data_3.innerHTML = vmanumensal.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row12_data_4 = document.createElement('td');
+            row12_data_4.innerHTML = (vmanumensal/ dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row12_data_5 = document.createElement('td');
+            row12_data_5.innerHTML = ((vmanumensal/ dias_trabalho_mes)/horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row12.appendChild(row12_data_1);
+            row12.appendChild(row12_data_2);
+            row12.appendChild(row12_data_3);
+            row12.appendChild(row12_data_4);
+            row12.appendChild(row12_data_5);
+            tbody.appendChild(row12);
+        }
+        ////imovel
+        if(checkimovel[0].checked){
+            let row13 = document.createElement('tr');
+            row13.classList = "tabelapar"
+            let row13_data_1 = document.createElement('td');
+            row13_data_1.innerHTML = "Imóvel";
+            let row13_data_2 = document.createElement('td');
+            row13_data_2.innerHTML = (vmensalimovel*12).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row13_data_3 = document.createElement('td');
+            row13_data_3.innerHTML = vmensalimovel.toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row13_data_4 = document.createElement('td');
+            row13_data_4.innerHTML = (vmensalimovel/ dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row13_data_5 = document.createElement('td');
+            row13_data_5.innerHTML = ((vmensalimovel/ dias_trabalho_mes)/ horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+
+            row13.appendChild(row13_data_1);
+            row13.appendChild(row13_data_2);
+            row13.appendChild(row13_data_3);
+            row13.appendChild(row13_data_4);
+            row13.appendChild(row13_data_5);
+            tbody.appendChild(row13);
+        }
+        /////agua,luz,telefonia
+
+        if(checkcontas[0].checked){
+            let row14 = document.createElement('tr');
+            row14.classList = "tabelaimpar"
+            let row14_data_1 = document.createElement('td');
+            row14_data_1.innerHTML = "Água ,luz ,telefônia";
+            let row14_data_2 = document.createElement('td');
+            row14_data_2.innerHTML = (vmensalcontas*12).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row14_data_3 = document.createElement('td');
+            row14_data_3.innerHTML = (vmensalcontas).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row14_data_4 = document.createElement('td');
+            row14_data_4.innerHTML = (vmensalcontas / dias_trabalho_mes).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
+            let row14_data_5 = document.createElement('td');
+            row14_data_5.innerHTML = ((vmensalcontas / dias_trabalho_mes)/ horastrabalho).toLocaleString('pt-BR' , {style: 'currency' , currency: 'BRL'})
     
-    document.getElementById('table1').style="display:none;"
-    document.getElementById('titulo').innerHTML= "Valor a ser cobrado."
-    document.getElementById('foto').style="display:none;"
-    document.getElementById('btncalc').style="display:none;"
-    //document.getElementById('btnlimpar').style="display:none;"
-    document.getElementById('btnlimpar').value ="Voltar"
-    let table = document.createElement('table');
-    let thead = document.createElement('thead');
-    let tbody = document.createElement('tbody');
+            row14.appendChild(row14_data_1);
+            row14.appendChild(row14_data_2);
+            row14.appendChild(row14_data_3);
+            row14.appendChild(row14_data_4);
+            row14.appendChild(row14_data_5);
+            tbody.appendChild(row14); 
+        }
 
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    document.getElementById('calculadora').appendChild(table);
- 
-    // Creating and adding data to first row of the table
-    //criar um for
-    let row1 = document.createElement('tr');
-    row1.classList = "tabelaimpar"
-    let row_data_1 = document.createElement('td');
-    row_data_1.innerHTML = " Item ";
-    let row_data_2 = document.createElement('td');
-    row_data_2.innerHTML = " Valor total anual ";
-    let row_data_3 = document.createElement('td');
-    row_data_3.innerHTML = " Valor mensal ";
-    let row_data_4 = document.createElement('td');
-    row_data_4.innerHTML = " Valor diário ";
-    let row_data_5 = document.createElement('td');
-    row_data_5.innerHTML = " Valor por hora ";
-
-    row1.appendChild(row_data_1);
-    row1.appendChild(row_data_2);
-    row1.appendChild(row_data_3);
-    row1.appendChild(row_data_4);
-    row1.appendChild(row_data_5);
-
-    tbody.appendChild(row1);
-
-    let row2 = document.createElement('tr');
-    row2.classList = "tabelapar"
-    row2.style= "font-size:22px;color:green;font-weight: bold;"
-    let row2_data_1 = document.createElement('td');
-    row2_data_1.innerHTML = " Total ";
-    let row2_data_2 = document.createElement('td');
-    row2_data_2.innerHTML = somaano.toFixed(2);
-    let row2_data_3 = document.createElement('td');
-    row2_data_3.innerHTML = (somaano/12).toFixed(2);
-    let row2_data_4 = document.createElement('td');
-    row2_data_4.innerHTML = ((somaano/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row2_data_5 = document.createElement('td');
-    row2_data_5.innerHTML = (((somaano/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row2.appendChild(row2_data_1);
-    row2.appendChild(row2_data_2);
-    row2.appendChild(row2_data_3);
-    row2.appendChild(row2_data_4);
-    row2.appendChild(row2_data_5);
-
-    tbody.appendChild(row2);
-////salario/////////
-    let row3 = document.createElement('tr');
-    row3.classList = "tabelaimpar"
-    let row3_data_1 = document.createElement('td');
-    row3_data_1.innerHTML = " Salário ";
-    let row3_data_2 = document.createElement('td');
-    row3_data_2.innerHTML = salpret*mesestrabalho;
-    let row3_data_3 = document.createElement('td');
-    row3_data_3.innerHTML = salpret;
-    let row3_data_4 = document.createElement('td');
-    row3_data_4.innerHTML = (salpret/dias_trabalho_mes).toFixed(2);
-    let row3_data_5 = document.createElement('td');
-    row3_data_5.innerHTML = ((salpret/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row3.appendChild(row3_data_1);
-    row3.appendChild(row3_data_2);
-    row3.appendChild(row3_data_3);
-    row3.appendChild(row3_data_4);
-    row3.appendChild(row3_data_5);
-
-    tbody.appendChild(row3);
-
-//////decimo terceiro///////
-    let row4 = document.createElement('tr');
-    row4.classList = "tabelapar"
-    let row4_data_1 = document.createElement('td');
-    row4_data_1.innerHTML = "13° salário";
-    let row4_data_2 = document.createElement('td');
-    row4_data_2.innerHTML = decimo.toFixed(2);
-    let row4_data_3 = document.createElement('td');
-    row4_data_3.innerHTML = (decimo/mesestrabalho).toFixed(2);
-    let row4_data_4 = document.createElement('td');
-    row4_data_4.innerHTML = ((decimo/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row4_data_5 = document.createElement('td');
-    row4_data_5.innerHTML = (((decimo/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row4.appendChild(row4_data_1);
-    row4.appendChild(row4_data_2);
-    row4.appendChild(row4_data_3);
-    row4.appendChild(row4_data_4);
-    row4.appendChild(row4_data_5);
-
-    tbody.appendChild(row4);
-    ////////ferias
-    let row5 = document.createElement('tr');
-    row5.classList = "tabelaimpar"
-    let row5_data_1 = document.createElement('td');
-    row5_data_1.innerHTML = "Férias";
-    let row5_data_2 = document.createElement('td');
-    row5_data_2.innerHTML = ferias.toFixed(2);
-    let row5_data_3 = document.createElement('td');
-    row5_data_3.innerHTML = (ferias/mesestrabalho).toFixed(2);
-    let row5_data_4 = document.createElement('td');
-    row5_data_4.innerHTML = ((ferias/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row5_data_5 = document.createElement('td');
-    row5_data_5.innerHTML = (((ferias/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row5.appendChild(row5_data_1);
-    row5.appendChild(row5_data_2);
-    row5.appendChild(row5_data_3);
-    row5.appendChild(row5_data_4);
-    row5.appendChild(row5_data_5);
-
-    tbody.appendChild(row5);
-
-    /////previdencia
-    let row6 = document.createElement('tr');
-    row6.classList = "tabelapar"
-    let row6_data_1 = document.createElement('td');
-    row6_data_1.innerHTML = "Previdência";
-    let row6_data_2 = document.createElement('td');
-    row6_data_2.innerHTML = previsaomensal;
-    let row6_data_3 = document.createElement('td');
-    row6_data_3.innerHTML = (previsaomensal/mesestrabalho).toFixed(2);
-    let row6_data_4 = document.createElement('td');
-    row6_data_4.innerHTML = ((previsaomensal/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row6_data_5 = document.createElement('td');
-    row6_data_5.innerHTML = (((previsaomensal/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row6.appendChild(row6_data_1);
-    row6.appendChild(row6_data_2);
-    row6.appendChild(row6_data_3);
-    row6.appendChild(row6_data_4);
-    row6.appendChild(row6_data_5);
-
-    tbody.appendChild(row6);
-    
-    /////ipva + licenciamento
-
-    let row7 = document.createElement('tr');
-    row7.classList = "tabelaimpar"
-    let row7_data_1 = document.createElement('td');
-    row7_data_1.innerHTML = "IPVA + Licenciamento";
-    let row7_data_2 = document.createElement('td');
-    row7_data_2.innerHTML = (ipva + licenciamento).toFixed(2);
-    let row7_data_3 = document.createElement('td');
-    row7_data_3.innerHTML = (((ipva + licenciamento)/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row7_data_4 = document.createElement('td');
-    row7_data_4.innerHTML = (((ipva + licenciamento)/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row7_data_5 = document.createElement('td');
-    row7_data_5.innerHTML = ((((ipva + licenciamento)/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row7.appendChild(row7_data_1);
-    row7.appendChild(row7_data_2);
-    row7.appendChild(row7_data_3);
-    row7.appendChild(row7_data_4);
-    row7.appendChild(row7_data_5);
-
-    tbody.appendChild(row7);
-
-    ////seguro
-
-    let row8 = document.createElement('tr');
-    row8.classList = "tabelapar"
-    let row8_data_1 = document.createElement('td');
-    row8_data_1.innerHTML = "Seguro Automotivo";
-    let row8_data_2 = document.createElement('td');
-    row8_data_2.innerHTML = vseganual.toFixed(2);
-    let row8_data_3 = document.createElement('td');
-    row8_data_3.innerHTML = (vseganual/mesestrabalho).toFixed(2);
-    let row8_data_4 = document.createElement('td');
-    row8_data_4.innerHTML = ((vseganual/mesestrabalho)/dias_trabalho_mes).toFixed(2);
-    let row8_data_5 = document.createElement('td');
-    row8_data_5.innerHTML = (((vseganual/mesestrabalho)/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row8.appendChild(row8_data_1);
-    row8.appendChild(row8_data_2);
-    row8.appendChild(row8_data_3);
-    row8.appendChild(row8_data_4);
-    row8.appendChild(row8_data_5);
-
-    tbody.appendChild(row8);
-
-    ////locomoção
-
-    let row9 = document.createElement('tr');
-    row9.classList = "tabelaimpar"
-    let row9_data_1 = document.createElement('td');
-    row9_data_1.innerHTML = "Locomoção";
-    let row9_data_2 = document.createElement('td');
-    row9_data_2.innerHTML = (custodialocomocao* mesestrabalho).toFixed(2);
-    let row9_data_3 = document.createElement('td');
-    row9_data_3.innerHTML = (custodialocomocao).toFixed(2);
-    let row9_data_4 = document.createElement('td');
-    row9_data_4.innerHTML = ((custodialocomocao)/dias_trabalho_mes).toFixed(2);
-    let row9_data_5 = document.createElement('td');
-    row9_data_5.innerHTML = ((custodialocomocao/dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row9.appendChild(row9_data_1);
-    row9.appendChild(row9_data_2);
-    row9.appendChild(row9_data_3);
-    row9.appendChild(row9_data_4);
-    row9.appendChild(row9_data_5);
-
-    tbody.appendChild(row9);
-
-    ///refeição
-
-    let row10 = document.createElement('tr');
-    row10.classList = "tabelapar"
-    let row10_data_1 = document.createElement('td');
-    row10_data_1.innerHTML = "Refeição";
-    let row10_data_2 = document.createElement('td');
-    row10_data_2.innerHTML = (custodiarefeicao * mesestrabalho);
-    let row10_data_3 = document.createElement('td');
-    row10_data_3.innerHTML = custodiarefeicao.toFixed(2);
-    let row10_data_4 = document.createElement('td');
-    row10_data_4.innerHTML = (custodiarefeicao/ dias_trabalho_mes).toFixed(2);
-    let row10_data_5 = document.createElement('td');
-    row10_data_5.innerHTML =  ((custodiarefeicao/ dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row10.appendChild(row10_data_1);
-    row10.appendChild(row10_data_2);
-    row10.appendChild(row10_data_3);
-    row10.appendChild(row10_data_4);
-    row10.appendChild(row10_data_5);
-
-    tbody.appendChild(row10);
-
-    ////ajudante
-
-    let row11 = document.createElement('tr');
-    row11.classList = "tabelaimpar"
-    let row11_data_1 = document.createElement('td');
-    row11_data_1.innerHTML = "Ajudante";
-    let row11_data_2 = document.createElement('td');
-    row11_data_2.innerHTML = (custodiafreelancer * mesestrabalho).toFixed(2);
-    let row11_data_3 = document.createElement('td');
-    row11_data_3.innerHTML = custodiafreelancer.toFixed(2);
-    let row11_data_4 = document.createElement('td');
-    row11_data_4.innerHTML = (custodiafreelancer/ dias_trabalho_mes).toFixed(2);
-    let row11_data_5 = document.createElement('td');
-    row11_data_5.innerHTML = ((custodiafreelancer/ dias_trabalho_mes)/ horastrabalho).toFixed(2);
-
-    row11.appendChild(row11_data_1);
-    row11.appendChild(row11_data_2);
-    row11.appendChild(row11_data_3);
-    row11.appendChild(row11_data_4);
-    row11.appendChild(row11_data_5);
-
-    tbody.appendChild(row11);
-
-    ////manutenção
-
-    let row12 = document.createElement('tr');
-    row12.classList = "tabelapar"
-    let row12_data_1 = document.createElement('td');
-    row12_data_1.innerHTML = "Manutenções ferramentas";
-    let row12_data_2 = document.createElement('td');
-    row12_data_2.innerHTML = (vmanumensal * mesestrabalho).toFixed(2);
-    let row12_data_3 = document.createElement('td');
-    row12_data_3.innerHTML = vmanumensal.toFixed(2);
-    let row12_data_4 = document.createElement('td');
-    row12_data_4.innerHTML = (vmanumensal/ dias_trabalho_mes).toFixed(2);
-    let row12_data_5 = document.createElement('td');
-    row12_data_5.innerHTML = ((vmanumensal/ dias_trabalho_mes)/horastrabalho).toFixed(2);
-
-    row12.appendChild(row12_data_1);
-    row12.appendChild(row12_data_2);
-    row12.appendChild(row12_data_3);
-    row12.appendChild(row12_data_4);
-    row12.appendChild(row12_data_5);
-
-    tbody.appendChild(row12);
-
-    ////imovel
-
-    let row13 = document.createElement('tr');
-    row13.classList = "tabelaimpar"
-    let row13_data_1 = document.createElement('td');
-    row13_data_1.innerHTML = "Imóvel";
-    let row13_data_2 = document.createElement('td');
-    row13_data_2.innerHTML = (vmensalimovel*12).toFixed(2);
-    let row13_data_3 = document.createElement('td');
-    row13_data_3.innerHTML = vmensalimovel.toFixed(2);
-    let row13_data_4 = document.createElement('td');
-    row13_data_4.innerHTML = (vmensalimovel/ dias_trabalho_mes).toFixed(2);
-    let row13_data_5 = document.createElement('td');
-    row13_data_5.innerHTML = ((vmensalimovel/ dias_trabalho_mes)/ horastrabalho).toFixed(2);
-
-    row13.appendChild(row13_data_1);
-    row13.appendChild(row13_data_2);
-    row13.appendChild(row13_data_3);
-    row13.appendChild(row13_data_4);
-    row13.appendChild(row13_data_5);
-
-    tbody.appendChild(row13);
-
-    /////agua,luz,telefonia
-
-    let row14 = document.createElement('tr');
-    row14.classList = "tabelapar"
-    let row14_data_1 = document.createElement('td');
-    row14_data_1.innerHTML = "Água ,luz ,telefônia";
-    let row14_data_2 = document.createElement('td');
-    row14_data_2.innerHTML = (vmensalcontas*12).toFixed(2);
-    let row14_data_3 = document.createElement('td');
-    row14_data_3.innerHTML = (vmensalcontas).toFixed(2);
-    let row14_data_4 = document.createElement('td');
-    row14_data_4.innerHTML = (vmensalcontas / dias_trabalho_mes).toFixed(2);
-    let row14_data_5 = document.createElement('td');
-    row14_data_5.innerHTML = ((vmensalcontas / dias_trabalho_mes)/ horastrabalho).toFixed(2);
-
-    row14.appendChild(row14_data_1);
-    row14.appendChild(row14_data_2);
-    row14.appendChild(row14_data_3);
-    row14.appendChild(row14_data_4);
-    row14.appendChild(row14_data_5);
-
-    tbody.appendChild(row14);
-
-    document.createElement('br')
-    document.getElementById('calculadora').appendChild(document.createElement('br'))
-
-
+        document.createElement('br')
+        document.getElementById('calculadora').appendChild(document.createElement('br'))
+    }else{
+        if(salpret<0 || diastrabalho <0 || horastrabalho <0){
+            erro_negativos()
+        }else if(!salpret || !diastrabalho || !horastrabalho){
+            erro_parametros()
+        }
+    }
 }
-/*function exibir(){
-}*/
 function limpar(){
     location.reload()
 }
@@ -522,10 +548,30 @@ function displayvisible(x){
     x.style = "display:visible;"
 }
 function erro_negativos(){
+    if(document.getElementById("parametrosnegativos")){
+        document.getElementById("parametrosnegativos").remove()
+    }
+    if(document.getElementById("insira3parametros")){
+        document.getElementById("insira3parametros").remove()
+    }
     var lblnegativos = document.createElement('label')
     lblnegativos.classList= "erro"
-    lblnegativos.innerHTML = "anual = " + (somaano.toFixed(2)) + " mensal = " + ((somaano/12).toFixed(2)) + " dia = " + ((somaano/mesestrabalho)/22).toFixed(2)
+    lblnegativos.innerHTML = "ERRO!! Insira parâmetros positivos"
+    lblnegativos.id ="parametrosnegativos"
     campos.appendChild(lblnegativos)
+}
+function erro_parametros(){
+    if(document.getElementById("insira3parametros")){
+        document.getElementById("insira3parametros").remove()
+    }
+    if(document.getElementById("parametrosnegativos")){
+        document.getElementById("parametrosnegativos").remove()
+    }
+    var lblparametros = document.createElement('label')
+    lblparametros.classList= "erro"
+    lblparametros.innerHTML = "ERRO!! Insira os parâmetros <br>Salário pretendido ,<br>Dias trabalhados por semana , <br>Horas trabalhadas por dia"
+    lblparametros.id = "insira3parametros"
+    campos.appendChild(lblparametros)
 }
 function displaynone(x){
     x.style = "display:none;"  

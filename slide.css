@@ -30,7 +30,7 @@ body {
     transition: 1.5s;
 }
 .slide img{
-    width: 80%;
+    width: 98%;
 }
 .manual-navigation{
     position: absolute;
@@ -258,7 +258,7 @@ body {
         transition: 1.5s;
     }
     .slide img{
-        width: 80%;
+        width: 100%;
     }
     .manual-navigation{
         position: absolute;

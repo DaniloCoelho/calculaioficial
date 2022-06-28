@@ -12,12 +12,14 @@
     visibility:visible;
 }
 h1{
+    padding-top: 15px;
     font-size: 25px;
     text-align: center;
     color: rgb(51, 49, 153);  
 }
 .linha{
-    padding: 10px;
+    padding: 0px;
+    padding-top: 10px;
 }
 .div_central{
     display:inline-flex;
@@ -29,13 +31,12 @@ h1{
     width: 22%;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
+    padding: 5px;
     
 
 }
 .calculadora{
     
-    background-color: rgb(221, 231, 236);
     width: 50%;
     max-width: 600px;
     min-width: 200px;
@@ -44,6 +45,7 @@ h1{
     border-radius: 10px;
     box-shadow:7px 4px 4px rgb(156, 156, 156);
     margin: auto;
+    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
 }
 .botao{
     max-width: 620px;
@@ -86,6 +88,16 @@ h1{
 
     
 }
+.tabelaprincipal{
+    background-color:rgb(245, 231, 154);
+    font-size: 20px;
+    padding: 15px;
+    margin: auto;
+    max-width: 650px;
+    min-width: 100px;
+
+    
+}
 .tabelapar{
     background-color: rgb(220, 230, 255);
     font-size: 20px;
@@ -116,13 +128,14 @@ h1{
     font-size: 14px;
 }
 nav{
-    background-color: rgb(221, 231, 236);
+    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
     height: 50px;
     width: 100%;
     position:relative;
     box-shadow:7px 4px 4px rgb(156, 156, 156);
     border-radius: 10px;
     z-index:1 ;
+    
     
    
 }
@@ -159,10 +172,10 @@ nav ul li a {
     
 }
 a.active , a:hover{
-    background: rgb(161, 177, 186);
     border-radius: 5px;
     color: rgb(255, 255, 255);  
     padding-left: 5px;
+    background-image: linear-gradient( rgb(83, 91, 147) , rgb(168, 170, 170));
     
 
     
@@ -176,6 +189,7 @@ ul ul{
     margin: 0px;
     border-radius: 10px;
     line-height: 15px;
+    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
 
 }
 ul ul li{
@@ -197,10 +211,10 @@ ul li:hover ul{
     transition: 5%;
 }
 .rodape{
-   width: 100%; 
+   width: 50%; 
    height: 300px;
-   background-color: rgb(155, 161, 164);
-   color: aliceblue;
+   /*background-color: rgb(155, 161, 164);*/
+   color: rgb(17, 17, 18);
 }
 .div_anuncio_rodape{
     width: 99%;
@@ -208,7 +222,7 @@ ul li:hover ul{
     
 }
 .label_dropdown{
-    background-color: rgb(55, 55, 153);
+    background-image: linear-gradient(to right, rgb(9, 3, 175) , rgb(112, 131, 244));
     color: white;
     font-size: 14px;
     line-height: 20px;
@@ -235,6 +249,14 @@ ul li:hover ul{
         border-radius: 5px;
         margin: auto;
         font-size:12px;
+    }
+    .tabelaprincipal{
+        font-size: 13px;
+        padding: 1px;
+        margin: auto;
+        max-width: 99%;
+        min-width: 10px; 
+        background-color:rgb(245, 231, 154);
     }
     .tabelapar{
         font-size: 13px;
@@ -266,11 +288,12 @@ ul li:hover ul{
         margin: auto;
     }
     h1{
+        padding-top: 10px;
         font-size: 17px;
         text-align: center;
     }
     .label_dropdown{
-        background-color: rgb(55, 55, 153);
+        background-image: linear-gradient(to right, rgb(9, 3, 175) , rgb(112, 131, 244));
         color: white;
         font-size: 12px;
     }
@@ -285,7 +308,7 @@ ul li:hover ul{
         margin: auto;
     }
     .linha{
-        padding: 5px;
+        padding-top: 10px;
     }
     .fonte_size{
         font-size: 12px;
@@ -307,6 +330,14 @@ ul li:hover ul{
         border-radius: 10px;
         margin: 5px;
         max-width: 70%;
+    }
+    .tabelaparincipal{
+        font-size: 10.5px;
+        padding: 1px;
+        margin: auto;
+        max-width: 99%;
+        min-width: 10px; 
+        background-color: rgb(245, 231, 154);
     }
     
     .tabelapar{
@@ -336,6 +367,7 @@ ul li:hover ul{
         border-radius: 5px;
         margin: auto;
         font-size:12px;
+        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
     }
     .caixa{
         max-width: 500px;
@@ -364,51 +396,76 @@ ul li:hover ul{
     }
     label.logo{
         color: rgb(51, 49, 153);
-        font-size: 11px;
-        line-height: 1px;
-        padding: 1px;
+        font-size: 15px;
+        line-height: 12px;
+        padding: 8px;
         font-weight: bold;
-        margin-left: 1px;
-        position:initial;
+        margin-left: -160px;
+        position:absolute;
+        height: 100%;
     }
     nav{
-        background:  rgb(221, 231, 236);
         
         width: 99%;
         position: relative;
         box-shadow:4px 2px 2px rgb(156, 156, 156);
         border-radius: 3px;
-        margin-right: 30px;
+        margin-right: 20px;
+        height: 35px;
+        background-image: linear-gradient(to right, rgb(198, 220, 231) , rgb(228, 248, 250));
         
     }
     nav ul{
         float: right;
-        margin: right 10px;
-        padding: 1px;
+        margin: right 20px;
+        padding: 0px;
+        
+        
         
     }
     nav ul li{
         position:relative;
         display: inline-block;
-        line-height: 15px;
-        margin: 2px;
-        padding: 1px; 
-        text-align: left;    
+        line-height: 25px;
+        margin: 0px;
+        height: 100%;
+        text-align: left; 
+        
     }
+    
     nav ul li a {
         color: rgb(51, 49, 153);
-        font-size: 11px;
-        padding: 1px;
+        font-size: 13px;
+        padding: 5px;
         border-radius: 2px; 
         
     }
+    ul ul{
+        position: absolute;
+        min-width: 200px;
+        display: none;
+        background-color: rgb(221, 231, 236);
+        padding: 0px;
+        margin: 0px;
+        border-radius: 8px;
+        line-height: 15px;
+        
+    
+    }
     a.active , a:hover{
-        background: rgb(161, 177, 186);
+        
+        background-image: linear-gradient( rgb(83, 91, 147) , rgb(168, 170, 170));
+        font-size: 13px;
+        /*padding-left: 4px;
+        padding-top: 4px;*/
+        padding-right: 5px;
+        
         
     }
     h1{
         font-size: 14px;
         text-align: center;
+        padding-top: 5px;
     }
     .div_central{
         display:block;
@@ -423,10 +480,10 @@ ul li:hover ul{
         width: 99%; 
      }
     .label_dropdown{
-        background-color: rgb(55, 55, 153);
+        background-image: linear-gradient(to right, rgb(9, 3, 175) , rgb(112, 131, 244));
         color: white;
         font-size: 8px;
-        width: 80%;
+        width: 99%;
         text-align: center;
         border-radius: 2px;
         
