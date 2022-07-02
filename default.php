@@ -31,17 +31,18 @@
                             <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li><br>
                             <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li><br>
                             <li style="min-width: 200px;"><a href="cone.html">Cone</a></li><br>
-                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
+                            <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>
+                            
                             
                         </ul>
                         
                     </li>
-                    <li><a href="metodologias.html">Metodologias</a></li>
+                    <li class="aparecer"><a href="metodologias.html">Metodologias</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
 
             </nav>
-        </div>
         <div class="linha"></div>
         <div class="div_central">
             <div class="div_anuncio">

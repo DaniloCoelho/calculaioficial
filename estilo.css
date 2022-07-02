@@ -227,6 +227,12 @@ ul li:hover ul{
     font-size: 14px;
     line-height: 20px;
 }
+.aparecer{
+    display: visible;
+}
+.aparecer_1{
+    display: none;
+}
 @media(max-width: 1150px){
     .fundo {
         text-align: center;
@@ -297,6 +303,12 @@ ul li:hover ul{
         color: white;
         font-size: 12px;
     }
+}
+.aparecer{
+    display: visible;
+}
+.aparecer_1{
+    display: none;
 }
 
 @media(max-width: 700px) {
@@ -396,11 +408,12 @@ ul li:hover ul{
     }
     label.logo{
         color: rgb(51, 49, 153);
-        font-size: 15px;
+        font-size: 16px;
         line-height: 12px;
-        padding: 8px;
+        padding-top: 8px;
         font-weight: bold;
-        margin-left: -160px;
+        text-align: left;
+        margin-left: -48%;
         position:absolute;
         height: 100%;
     }
@@ -410,14 +423,14 @@ ul li:hover ul{
         position: relative;
         box-shadow:4px 2px 2px rgb(156, 156, 156);
         border-radius: 3px;
-        margin-right: 20px;
-        height: 35px;
+        margin-right: 10px;
+        height: 40px;
         background-image: linear-gradient(to right, rgb(198, 220, 231) , rgb(228, 248, 250));
         
     }
     nav ul{
         float: right;
-        margin: right 20px;
+        margin: right 10px;
         padding: 0px;
         
         
@@ -426,23 +439,27 @@ ul li:hover ul{
     nav ul li{
         position:relative;
         display: inline-block;
-        line-height: 25px;
+        line-height: 40px;
         margin: 0px;
         height: 100%;
         text-align: left; 
+        margin-right: 10px;
+        
         
     }
     
     nav ul li a {
         color: rgb(51, 49, 153);
-        font-size: 13px;
-        padding: 5px;
+        font-size: 15px;
+        padding-left: 0px;
         border-radius: 2px; 
+        text-align: center;
+        
         
     }
     ul ul{
         position: absolute;
-        min-width: 200px;
+        min-width: 220px;
         display: none;
         background-color: rgb(221, 231, 236);
         padding: 0px;
@@ -450,22 +467,26 @@ ul li:hover ul{
         border-radius: 8px;
         line-height: 15px;
         
+        margin-left: -100px;
+        
+        
     
     }
     a.active , a:hover{
         
         background-image: linear-gradient( rgb(83, 91, 147) , rgb(168, 170, 170));
-        font-size: 13px;
+        font-size: 15px;
         /*padding-left: 4px;
         padding-top: 4px;*/
-        padding-right: 5px;
+        padding-right: 10px;
+        line-height: 40px;
         
         
     }
     h1{
-        font-size: 14px;
+        font-size: 16px;
         text-align: center;
-        padding-top: 5px;
+        padding: 5px;
     }
     .div_central{
         display:block;
@@ -486,6 +507,15 @@ ul li:hover ul{
         width: 99%;
         text-align: center;
         border-radius: 2px;
+        
+    }
+    .aparecer{
+        display: none;
+    }
+    .aparecer_1{
+        display: block;
+        
+        border-top: 3px solid rgb(127, 127, 190) ;
         
     }
     
