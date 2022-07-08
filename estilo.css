@@ -170,6 +170,7 @@ nav ul li a {
     padding-right: 5px;
     
     
+    
 }
 a.active , a:hover{
     border-radius: 5px;
@@ -410,12 +411,13 @@ ul li:hover ul{
         color: rgb(51, 49, 153);
         font-size: 16px;
         line-height: 12px;
-        padding-top: 8px;
+        padding-top: 11px;
         font-weight: bold;
         text-align: left;
         margin-left: -48%;
         position:absolute;
         height: 100%;
+        
     }
     nav{
         
@@ -456,10 +458,11 @@ ul li:hover ul{
         text-align: center;
         
         
+        
     }
     ul ul{
         position: absolute;
-        min-width: 220px;
+        min-width: 200px;
         display: none;
         background-color: rgb(221, 231, 236);
         padding: 0px;
