@@ -19,19 +19,22 @@
                     </li>
                     <li><a>Calculadoras&#9662;</a>
                         <ul>
-                            <li class="label_dropdown">Financeiro</li><br>
+                            <li class="label_dropdown">Financeiro</li>
                             
-                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li><br>
+                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li>
                             
-                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
-                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
-                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li><br>
+                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li>
                             <li class="label_dropdown"> Geometria </li>
                             
-                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li><br>
-                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li><br>
-                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li><br>
-                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
+                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li>
+                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li>
+                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li>
+                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li style="min-width: 200px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li><br>
+
+
                             <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>
                             
                             
@@ -51,7 +54,8 @@
             </div>
             <div class="linha"></div>
             <div class="calculadora">
-                <h1>Calculadora de uma pirâmide</h1>
+                <h1>Calculadora de pirâmide de base quadrada</h1>
+                <br>
                 <img src="img/piramidequadrada.png" alt="">
                 <table class="caixa" id="table1">
                     <tr>
@@ -72,7 +76,7 @@
                         <td><input type="number" name="" id="area" class="campo"></td>
                     </tr><tr>
                         <td>r- apótema base</td>
-                        <td><input type="number" name="" id="apótemabase" class="campo"></td>
+                        <td><input type="number" name="" id="apotemabase" class="campo"></td>
                     </tr><tr>
                         <td>fl- face lateral</td>
                         <td><input type="number" name="" id="flateral" class="campo"></td>
@@ -82,6 +86,7 @@
                 <div class="" id="campos">
                     <h1><input type="button" value="Calcular" onclick="calcular()" class="botao"> <input type="button" value="Limpar" onclick="limpar()" class="botao"> </h1>
                 </div>
+                <br>
 
             </div>
             <div class="linha"></div>
@@ -96,11 +101,11 @@
         </div>
         <div class="rodape" style="margin: auto; text-align: left;">
             <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .</p>
-            <h1>Metodologia Cone</h1>
+            <h1>Metodologia Pirâmide de base quadrada</h1>
                 <br>
-                <p> Nessa ferrramenta usamos as relações de cálculos de circulos , cilindros e triângulos. </p>
+                <p> Nessa ferrramenta usamos as relações de cálculos de área e triângulos com teorema de pitágoras. </p>
                 <p>
-                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto cônico e calcular volume de objetos .
+                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto na forma de uma pirâmide e calcular volume de objetos .
                 </p>
                 <p>
                     O usuário deve inserir pelo menos dois parâmetros para calcular todos os outros .
@@ -109,16 +114,19 @@
                 São usadas as fórmulas:
                 <br>
                 <br>
-                Volume = 1/3 . &pi; . raio<sup>2</sup> . altura
+                Volume = ( área . altura ) /3 
                 <br>
-                Área da superfície =  &pi; . altura +  &pi; . raio<sup>2</sup>
+                Relações trigonométricas; <br>
+                 a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup>
                 <br>
-                Perímetro ou circuferência da base = 2 . &pi; . raio
+                sen  = cateto oposto / hipotenusa
                 <br>
-                Diâmetro da base = 2 . raio
+                cosseno = cateto adjacente / hipotenusa
+                <br>
+                tangente = cateto oposto / cateto adjacente 
                 <br>
                 <p>
-                    O cálculo da área da superfície (área da base + área lateral da superfície) é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
+                    O cálculo das áreas da face lateral e base é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
                 </p>
                 <p>
                     O cálculo de volume é medido em unidade ao cubo (u<sup>3</sup>) e retornado ao usuário .
