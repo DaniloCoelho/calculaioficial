@@ -62,11 +62,11 @@ function calcular(){
         exibir()
     }
     if(alt && gtriz && !control){
-        if(alt> gtriz){
+        if(alt>= gtriz){
             var lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a altura não pode ser maior que a geratriz "
+            lblerro.innerHTML = "Erro!! a altura não pode ser igual ou maior que a geratriz "
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -81,11 +81,11 @@ function calcular(){
         
     }
     if(alt && arestapi && !control){
-        if(alt> arestapi){
+        if(alt>= arestapi){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a altura não pode ser maior que a aresta da pirâmide "
+            lblerro.innerHTML = "Erro!! a altura não pode ser igual ou maior que a aresta da pirâmide "
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -112,11 +112,11 @@ function calcular(){
 
     }
     if(alt && fl && !control){
-        if(alt > fl){
+        if(alt >= fl){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a altura não pode ser maior que a área da face lateral "
+            lblerro.innerHTML = "Erro!! a altura não pode ser igual ou maior que a área da face lateral "
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -161,11 +161,11 @@ function calcular(){
     }
     if(lb && gtriz && !control){
         apobase = lb / 2
-        if(apobase> gtriz){
+        if(apobase>= gtriz){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a apótema da base não pode ser maior que a geratriz"
+            lblerro.innerHTML = "Erro!! a apótema da base não pode ser igual ou maior que a geratriz"
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -214,11 +214,11 @@ function calcular(){
         exibir()
     }
     if(gtriz && arestapi && !control){
-        if(gtriz> arestapi){
+        if(gtriz>= arestapi){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a geratriz não pode ser maior que a aresta da pirâmide"
+            lblerro.innerHTML = "Erro!! a geratriz não pode ser igual ou maior que a aresta da pirâmide"
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -242,11 +242,11 @@ function calcular(){
         exibir()
     }
     if(gtriz && apobase && !control){
-        if(gtriz< apobase){
+        if(gtriz <= apobase){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a geratriz não pode ser maior que a aresta pirâmide"
+            lblerro.innerHTML = "Erro!! a geratriz não pode ser igual ou menor que a apótema da base"
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -261,11 +261,11 @@ function calcular(){
         
     }
     if(gtriz && fl && !control){
-        if(gtriz> fl){
+        if(gtriz>= fl){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a geratriz não pode ser maior que a área da face lateral"
+            lblerro.innerHTML = "Erro!! a geratriz não pode ser igual ou maior que a área da face lateral"
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -290,11 +290,11 @@ function calcular(){
 
     }
     if(arestapi && apobase && !control){
-        if(apobase> arestapi){
+        if(apobase>= arestapi){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a apótema da base não pode ser maior que a aresta pirâmide"
+            lblerro.innerHTML = "Erro!! a apótema da base não pode ser igual ou maior que a aresta pirâmide"
             campos.appendChild(lblerro)
             control = true
             
@@ -310,11 +310,11 @@ function calcular(){
         
     }
     if(arestapi && fl && !control){
-        if(fl < arestapi){
+        if(fl <= arestapi){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a área da face lateral não pode ser menor que a aresta pirâmide"
+            lblerro.innerHTML = "Erro!! a área da face lateral não pode ser igual ou menor que a aresta pirâmide"
             campos.appendChild(lblerro)
             control = true
         }else{
@@ -374,11 +374,11 @@ function calcular(){
         exibir()
     }
     if(apobase && fl && !control){
-        if(apobase > fl){
+        if(apobase >= fl){
             lblerro = document.createElement('label')
             lblerro.id = "lblerro"
             lblerro.classList= "erro"
-            lblerro.innerHTML = "Erro!! a apótema da base não pode ser maior que a área da face lateral"
+            lblerro.innerHTML = "Erro!! a apótema da base não pode ser igual ou maior que a área da face lateral"
             campos.appendChild(lblerro)
             control = true
         }else{
