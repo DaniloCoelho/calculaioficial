@@ -234,6 +234,11 @@ ul li:hover ul{
 .aparecer_1{
     display: none;
 }
+.field{
+    width: 60%;
+    padding: 3px;
+    margin-top: 5px;
+}
 @media(max-width: 1150px){
     .fundo {
         text-align: center;

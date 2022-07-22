@@ -35,7 +35,7 @@ body {
 .manual-navigation{
     position: absolute;
     width: 50%;
-    margin-top: 37%;
+    margin-top: 650px;
     display: flex;
     justify-content: center;
 }
@@ -88,7 +88,7 @@ body {
 .navigation-auto{
     position: absolute;
     width: 50%;
-    margin-top: 37%;
+    margin-top: 650px;
     display: flex;
     justify-content: center;
 }
@@ -148,7 +148,7 @@ body {
     .manual-navigation{
         position: absolute;
         width: 50%;
-        margin-top: 37%;
+        margin-top: 280px;
         display: flex;
         justify-content: center;
     }
@@ -202,7 +202,7 @@ body {
     .navigation-auto{
         position: absolute;
         width: 50%;
-        margin-top: 37%;
+        margin-top: 280px;
         display: flex;
         justify-content: center;
     }
@@ -263,7 +263,7 @@ body {
     .manual-navigation{
         position: absolute;
         width: 100%;
-        margin-top: 70%;
+        margin-top: 300px;
         display: flex;
         justify-content: center;
     }
@@ -315,7 +315,7 @@ body {
     .navigation-auto{
         position: absolute;
         width: 100%;
-        margin-top: 70%;
+        margin-top:300px;
         display: flex;
         justify-content: center;
     }
