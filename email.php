@@ -7,7 +7,7 @@
 
         $nome = addslashes($_POST['name']);
         $email = addslashes($_POST['email']);
-        $mensagem = addslashes($_POST['messsage']);
+        $mensagem = addslashes($_POST['message']);
 
         //agora preciso montar a mensagem para enviar 
 
@@ -27,11 +27,16 @@
         //chamar função mail() com os parametros ai retorna verdadeiro ou falso
         if(mail($to,$subject,$body,$header)){
             echo("Email enviado com sucesso!");
+            header("location: index.html");
         }else{
             echo("Email não enviado!");
+            header("location: index.html");
         }
         
 
+    }
+    else{
+        header("location: contato.html");
     }
     
     
