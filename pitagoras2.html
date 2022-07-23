@@ -15,23 +15,26 @@
                 <label class="logo">Calcule aí!</label>
                 <ul>
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <a href="default.php">Inicio</a>
                     </li>
                     <li><a>Calculadoras&#9662;</a>
                         <ul>
-                            <li class="label_dropdown">Financeiro</li><br>
+                            <li class="label_dropdown">Financeiro</li>
                             
-                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li><br>
+                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li>
                             
-                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li><br>
-                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li><br>
-                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li><br>
+                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li>
                             <li class="label_dropdown"> Geometria </li>
                             
-                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li><br>
-                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li><br>
-                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li><br>
-                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li><br>
+                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li>
+                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li>
+                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li>
+                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li style="min-width: 200px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li><br>
+                            <li class="label_dropdown"> Elétrica / Eletrônica </li>
+                            <li style="min-width: 200px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li><br>
                             <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>
                             
                             
