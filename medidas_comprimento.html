@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
 
-    <title>Lei de ohm</title>
+    <title>Medidas de Comprimento</title>
 </head>
 <body>
     <div class="fundo">
@@ -54,23 +54,42 @@
             </div>
             <div class="linha"></div>
             <div class="calculadora">
-                <h1>Calculadora de grandezas elétricas</h1>
-                <br>
-                <img src="img/lei de ohm.png" alt="">
+                <h1>Conversor de medidas de comprimento</h1>
+                <img src="img/cone.png" alt="">
                 <table class="caixa" id="table1">
                     <tr>
-                        <td>p- potência</td>
-                        <td><input type="number" name="" id="potencia" class="campo"></td>
+                        <td>centímetros</td>
+                        <td><input type="number" name="" id="altura" class="campo"></td>
                     </tr>
                     <tr>
-                        <td>u- tensão</td>
-                        <td><input type="number" name="" id="tensao" class="campo"></td>
+                        <td>quilometros</td>
+                        <td><input type="number" name="" id="altura" class="campo"></td>
+                    </tr>
+                    <tr>
+                        <td>metros</td>
+                        <td><input type="number" name="" id="altura" class="campo"></td>
+                    </tr>
+                    <tr>
+                        <td>pés</td>
+                        <td><input type="number" name="" id="raio" class="campo"></td>
                     </tr><tr>
-                        <td>i- corrente</td>
-                        <td><input type="number" name="" id="corrente" class="campo" ></td>
+                        <td>polegadas</td>
+                        <td><input type="number" name="" id="diametro" class="campo" ></td>
                     </tr><tr>
-                        <td>r- resistência</td>
-                        <td><input type="number" name="" id="resistencia" class="campo"></td>
+                        <td>milhas</td>
+                        <td><input type="number" name="" id="perimetro" class="campo"></td>
+                    </tr><tr>
+                        <td>jardas</td>
+                        <td><input type="number" name="" id="area" class="campo"></td>
+                    </tr><tr>
+                        <td>milhas naúticas</td>
+                        <td><input type="number" name="" id="volume" class="campo"></td>
+                    </tr><tr>
+                        <td>léguas</td>
+                        <td><input type="number" name="" id="geratriz" class="campo"></td>
+                    </tr><tr>
+                        <td>rod</td>
+                        <td><input type="number" name="" id="geratriz" class="campo"></td>
                     </tr>
 
                 </table>
@@ -92,52 +111,40 @@
         </div>
         <div class="rodape" style="margin: auto; text-align: left;">
             <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .</p>
-            <h1>Metodologia Lei de Ohm</h1>
+            <h1>Metodologia Cone</h1>
                 <br>
-                <p> Nessa ferrramenta usamos as relações de cálculos de Potência , Tensão ,Corrente e Resistência. </p>
+                <p> Nessa ferrramenta usamos as relações de cálculos de circulos , cilindros e triângulos. </p>
                 <p>
-                    Indicado para estudantes , eletricistas e pessoas que queiram sanar algumas dúvidas.
+                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto cônico e calcular volume de objetos .
                 </p>
                 <p>
-                    O usuário deve inserir dois parâmetros para calcular todos os outros .
+                    O usuário deve inserir pelo menos dois parâmetros para calcular todos os outros .
                 </p>
                 <br>
                 São usadas as fórmulas:
                 <br>
                 <br>
-                Potência = Tensão . Corrente
+                Volume = 1/3 . &pi; . raio<sup>2</sup> . altura
                 <br>
-                Tensão = Resistência . Corrente
+                Área da superfície =  &pi; . altura +  &pi; . raio<sup>2</sup>
                 <br>
-                Corrente = Potência / Tensão
+                Perímetro ou circuferência da base = 2 . &pi; . raio
                 <br>
-                Resistência = Tensão / Corrente
-                <br>
-                E todas as sua relações.
-                <br>
+                Diâmetro da base = 2 . raio
                 <br>
                 <p>
-                    O cálculo da Potência é medido em Watts e retornado ao usuário .
+                    O cálculo da área da superfície (área da base + área lateral da superfície) é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
                 </p>
                 <p>
-                    O cálculo da Tensão é medido em Volts e retornado ao usuário .
+                    O cálculo de volume é medido em unidade ao cubo (u<sup>3</sup>) e retornado ao usuário .
                 </p>
                 <p>
-                    O cálculo da Corrente é medido em Ampére e retornado ao usuário .
-                </p>
-                <p>
-                    O cálculo da Resistência é medido em Ohm e retornado ao usuário .
-                </p>
-                <p>
-                    Essa ferramenta necessita de dois parâmetros possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,exceto a Tensão,é preciso observar essas hipóteses .
+                    Essa ferramenta necessita de dois parâmetros ou mais que possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,é preciso observar essas hipóteses .
                 </p>
         </div>
 
     </div>
 
-    <script src="logica_leideohm.js"></script>
+    <script src="logica_cone.js"></script>
 </body>
 </html>
-
-
-<!--precisa de id
