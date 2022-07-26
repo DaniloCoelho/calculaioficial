@@ -43,8 +43,12 @@ function calcular(){
     }
     var control = false
 
+    if(document.getElementById('erro_parametros_combinaveis')){
+        document.getElementById('erro_parametros_combinaveis').remove()
+    }
+
     if(!cmet && qmet && !met&& !pess && !pol && !mi && !jar && !man && !leg && !rodd && !control){
-        met = qui * 1000
+        met = qmet * 1000
         cmet = met * 100
         pess = met * 3.280839895
         pol = met * 39.3700787402
@@ -67,14 +71,14 @@ function calcular(){
         jar = met * 1.09361
         man = met * 0.000539957
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
 
     }
 
 
-    if(!cmet && !qmet && met&& !pess && !pol && !mi && !jar && !man && !leg && !rodd && !control){
+    else if(!cmet && !qmet && met&& !pess && !pol && !mi && !jar && !man && !leg && !rodd && !control){
         cmet = met * 100
         qmet = met * 0.001
         pess = met * 3.280839895
@@ -83,7 +87,7 @@ function calcular(){
         jar = met * 1.09361
         man = met * 0.000539957
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
     }
@@ -96,7 +100,7 @@ function calcular(){
         jar = met * 1.09361
         man = met * 0.000539957
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
     }
@@ -109,7 +113,7 @@ function calcular(){
         jar = met * 1.09361
         man = met * 0.000539957
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
 
@@ -123,7 +127,7 @@ function calcular(){
         jar = met * 1.09361
         man = met * 0.000539957
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
     }
@@ -136,7 +140,7 @@ function calcular(){
         mi = met * 0.000621371
         man = met * 0.000539957
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
     }
@@ -149,7 +153,7 @@ function calcular(){
         mi = met * 0.000621371
         jar = met * 1.09361
         leg = met * 0.000207124
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
     }
@@ -162,7 +166,7 @@ function calcular(){
         mi = met * 0.000621371
         jar = met * 1.09361
         man = met * 0.000539957
-        rod = met * 0.198839
+        rodd = met * 0.198839
         exibir()
         control = true
     }
@@ -181,77 +185,73 @@ function calcular(){
     }
     else {
         erro_parametros_combinaveis()
-        control = true
+        
     }
-
-    
 
     function exibir(){
         if(centimetros){
-            centimetros.value = cmet.toFixed(2)
+            centimetros.value = cmet.toFixed(4)
         }else{
             centimetros = document.getElementById('centimetros')
-            centimetros.value = cmet.toFixed(2)
+            centimetros.value = cmet.toFixed(4)
         }
         if(quilometros){
-            quilometros.value = qmet.toFixed(2)
+            quilometros.value = qmet.toFixed(4)
         }else{
             quilometros = document.getElementById('quilometros')
-            quilometros.value = qmet.toFixed(2)
+            quilometros.value = qmet.toFixed(4)
         }
         if(metros){
-            metros.value = met.toFixed(2)
+            metros.value = met.toFixed(4)
         }else{
             metros = document.getElementById('metros')
-            metros.value = met.toFixed(2)
+            metros.value = met.toFixed(4)
         }
         if(pes){
-            pes.value = pess.toFixed(2)
+            pes.value = pess.toFixed(4)
         }
         else{
             pes = document.getElementById('pes')
-            pes.value = pess.toFixed(2)
+            pes.value = pess.toFixed(4)
         }
         if(polegadas){
-            polegadas.value = pol.toFixed(2)
+            polegadas.value = pol.toFixed(4)
     
         }else{
             polegadas = document.getElementById('polegadas')
-            polegadas.value = pol.toFixed(2)  
+            polegadas.value = pol.toFixed(4)  
         }
         if(milhas){
-            milhas.value = mi.toFixed(2)
+            milhas.value = mi.toFixed(4)
         }else{
             milhas = document.getElementById('milhas')
-            milhas.value = mi.toFixed(2)
+            milhas.value = mi.toFixed(4)
         }
         if(jardas){
-            jardas.value = jar.toFixed(2)
+            jardas.value = jar.toFixed(4)
             
         }else{
             jardas = document.getElementById('jardas')
-            jardas.value = jar.toFixed(2)
+            jardas.value = jar.toFixed(4)
         }
         if(mnauticas){
-            mnauticas.value = man.toFixed(2)
+            mnauticas.value = man.toFixed(4)
         }else{
             mnauticas = document.getElementById('mnauticas')
-            mnauticas.value = man.toFixed(2)
+            mnauticas.value = man.toFixed(4)
         }
         if(leguas){
-            leguas.value = leg.toFixed(2)
+            leguas.value = leg.toFixed(4)
         }else{
             leguas = document.getElementById('leguas')
-            leguas.value = leg.toFixed(2)
+            leguas.value = leg.toFixed(4)
         }
         if(rod){
-            rod.value = rodd.toFixed(2)
+            rod.value = rodd.toFixed(4)
         }else{
             rod = document.getElementById('rod')
-            rod.value = rodd.toFixed(2)
+            rod.value = rodd.toFixed(4)
         }
-        
-
     }
     
 }
@@ -276,21 +276,22 @@ function limpar(){
     if(milhas){
         milhas.value = null
     }
-    if(area){
-        area.value = null
+    if(jardas){
+        jardas.value = null
         
     }
     if(mnauticas){
         mnauticas.value = null
     }
-    if(geratriz){
-        geratriz.value = null
+    if(leguas){
+        leguas.value = null
     }
-    if(document.getElementById('lblareabase')){
-        document.getElementById('lblareabase').remove()
+    if(rod){
+        rod.value = null
     }
-    if(document.getElementById('lblarealateral')){
-        document.getElementById('lblarealateral').remove()
+
+    if(document.getElementById('erro_parametros_combinaveis')){
+        document.getElementById('erro_parametros_combinaveis').remove()
     }
     
     
@@ -300,6 +301,7 @@ function limpar(){
 function erro_parametros_combinaveis(){
     var lblerroParametro = document.createElement('label')
     lblerroParametro.classList= "erro"
+    lblerroParametro.id="erro_parametros_combinaveis"
     lblerroParametro.innerHTML = "Preencha somente um parâmetro !!!"
     campos.appendChild(lblerroParametro)
 }
