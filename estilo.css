@@ -138,7 +138,7 @@ h1{
 nav{
     background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
     height: 50px;
-    width: 100%;
+    width: 99%;
     position:relative;
     box-shadow:7px 4px 4px rgb(156, 156, 156);
     border-radius: 10px;
@@ -244,6 +244,9 @@ ul li:hover ul{
     margin-top: 5px;
     background-color: white;
 }
+#inicio{
+    display: block;
+}
 @media(max-width: 1150px){
     .fundo {
         text-align: center;
@@ -314,13 +317,17 @@ ul li:hover ul{
         color: white;
         font-size: 12px;
     }
+    .aparecer{
+        display: visible;
+    }
+    .aparecer_1{
+        display: none;
+    }
+    #inicio{
+        display: block;
+    }
 }
-.aparecer{
-    display: visible;
-}
-.aparecer_1{
-    display: none;
-}
+
 
 @media(max-width: 700px) {
     .fundo {
@@ -419,7 +426,7 @@ ul li:hover ul{
     }
     label.logo{
         color: rgb(51, 49, 153);
-        font-size: 16px;
+        font-size: 14px;
         line-height: 12px;
         padding-top: 11px;
         font-weight: bold;
@@ -455,7 +462,7 @@ ul li:hover ul{
         margin: 0px;
         height: 100%;
         text-align: left; 
-        margin-right: 10px;
+        margin-right: 2px;
         
         
     }
@@ -480,7 +487,7 @@ ul li:hover ul{
         border-radius: 8px;
         line-height: 15px;
         
-        margin-left: -100px;
+        margin-left: -50px;
         
         
     
@@ -530,6 +537,9 @@ ul li:hover ul{
         
         border-top: 3px solid rgb(127, 127, 190) ;
         
+    }
+    #inicio{
+        display: none;
     }
     
 }

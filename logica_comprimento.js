@@ -190,67 +190,67 @@ function calcular(){
 
     function exibir(){
         if(centimetros){
-            centimetros.value = cmet.toFixed(4)
+            centimetros.value = cmet.toFixed(6)
         }else{
             centimetros = document.getElementById('centimetros')
-            centimetros.value = cmet.toFixed(4)
+            centimetros.value = cmet.toFixed(6)
         }
         if(quilometros){
-            quilometros.value = qmet.toFixed(4)
+            quilometros.value = qmet.toFixed(6)
         }else{
             quilometros = document.getElementById('quilometros')
-            quilometros.value = qmet.toFixed(4)
+            quilometros.value = qmet.toFixed(6)
         }
         if(metros){
-            metros.value = met.toFixed(4)
+            metros.value = met.toFixed(6)
         }else{
             metros = document.getElementById('metros')
-            metros.value = met.toFixed(4)
+            metros.value = met.toFixed(6)
         }
         if(pes){
-            pes.value = pess.toFixed(4)
+            pes.value = pess.toFixed(6)
         }
         else{
             pes = document.getElementById('pes')
-            pes.value = pess.toFixed(4)
+            pes.value = pess.toFixed(6)
         }
         if(polegadas){
-            polegadas.value = pol.toFixed(4)
+            polegadas.value = pol.toFixed(6)
     
         }else{
             polegadas = document.getElementById('polegadas')
-            polegadas.value = pol.toFixed(4)  
+            polegadas.value = pol.toFixed(6)  
         }
         if(milhas){
-            milhas.value = mi.toFixed(4)
+            milhas.value = mi.toFixed(6)
         }else{
             milhas = document.getElementById('milhas')
-            milhas.value = mi.toFixed(4)
+            milhas.value = mi.toFixed(6)
         }
         if(jardas){
-            jardas.value = jar.toFixed(4)
+            jardas.value = jar.toFixed(6)
             
         }else{
             jardas = document.getElementById('jardas')
-            jardas.value = jar.toFixed(4)
+            jardas.value = jar.toFixed(6)
         }
         if(mnauticas){
-            mnauticas.value = man.toFixed(4)
+            mnauticas.value = man.toFixed(6)
         }else{
             mnauticas = document.getElementById('mnauticas')
-            mnauticas.value = man.toFixed(4)
+            mnauticas.value = man.toFixed(6)
         }
         if(leguas){
-            leguas.value = leg.toFixed(4)
+            leguas.value = leg.toFixed(6)
         }else{
             leguas = document.getElementById('leguas')
-            leguas.value = leg.toFixed(4)
+            leguas.value = leg.toFixed(6)
         }
         if(rod){
-            rod.value = rodd.toFixed(4)
+            rod.value = rodd.toFixed(6)
         }else{
             rod = document.getElementById('rod')
-            rod.value = rodd.toFixed(4)
+            rod.value = rodd.toFixed(6)
         }
     }
     

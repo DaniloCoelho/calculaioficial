@@ -12,38 +12,44 @@
     <div class="fundo">
         <div>
             <nav style="z-index:10 ; clear: both;">
-                <label class="logo">Calcule aí!</label>
+                <a href="default.php" class="logo" style="text-decoration: none;"><label class="logo">Calcule aí!</label></a>
+                
                 <ul>
                     <li>
-                        <a href="default.php">Inicio</a>
+                        <a href="default.php" id="inicio">Inicio</a>
                     </li>
                     <li><a>Calculadoras&#9662;</a>
                         <ul>
                             <li class="label_dropdown">Financeiro</li>
                             
-                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li>
+                            <li style="min-width: 250px;"><a href="financiamento.html">Financiamentos</a></li>
                             
-                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
-                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
-                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li>
+                            <li style="min-width: 250px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                            <li style="min-width: 250px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                            <li style="min-width: 250px;"><a href="precificar.html">Precificar seu trabalho</a></li>
                             <li class="label_dropdown"> Geometria </li>
                             
-                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li>
-                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li>
-                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li>
-                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
-                            <li style="min-width: 200px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li><br>
+                            <li style="min-width: 250px;"><a href="cilindro.html">Cilindro</a></li>
+                            <li style="min-width: 250px;"><a href="circulo.html">Circulo</a></li>
+                            <li style="min-width: 250px;"><a href="cone.html">Cone</a></li>
+                            <li style="min-width: 250px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li style="min-width: 250px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li><br>
                             <li class="label_dropdown"> Elétrica / Eletrônica </li>
-                            <li style="min-width: 200px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
-                            <li class="label_dropdown">Conversores </li>
-                            <li style="min-width: 200px;"><a href="medidas_comprimento.html">medidas de comprimento</a></li><br>
-                            <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>
-                            
-                            
-                        </ul>
-                        
+                            <li style="min-width: 250px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
+                            <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>  
+                        </ul>  
                     </li>
-                    <li class="aparecer"><a href="metodologias.html">Metodologias</a></li>
+                    <li><a>Conversores&#9662;</a>
+                        <ul style="margin-left: -150px;">
+                            <li class="label_dropdown"> Conversores</li>
+                            <li style="min-width: 250px; "><a href="medidas_comprimento.html">Medidas de comprimento</a></li>
+                            <!--
+                            <li style="min-width: 250px;"><a href="valor_futuro.html">xxxx</a></li>
+                            <li style="min-width: 250px;"><a href="combustivel.html">xxxx </a></li>
+                            <li style="min-width: 250px;"><a href="precificar.html">xxxx</a></li>-->
+                              
+                        </ul>  
+                    </li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
 
@@ -57,7 +63,7 @@
             <div class="linha"></div>
             <div class="calculadora">
                 <h1>Conversor de medidas de comprimento</h1>
-                <img src="img/cone.png" alt="">
+                <img src="img/medidas1.ng.jpg" alt="">
                 <table class="caixa" id="table1">
                     <tr>
                         <td>centímetros</td>
@@ -112,36 +118,57 @@
             <!--anuncio-->
         </div>
         <div class="rodape" style="margin: auto; text-align: left;">
-            <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .</p>
-            <h1>Metodologia Cone</h1>
+            <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .
+            </p>
+            <h1>Metodologia Conversor de medidas de comprimento</h1>
                 <br>
-                <p> Nessa ferrramenta usamos as relações de cálculos de circulos , cilindros e triângulos. </p>
+                <p> Nessa ferrramenta usamos as relações de medidas de comprimento </p>
                 <p>
-                    Indicado para estudantes , pessoas que queiram criar algum produto (embalagem) , ou pintar , cobrir ou encapar algum objeto cônico e calcular volume de objetos .
+                    Indicado para estudantes , pessoas que queiram criar ou recriar algo que está relacionado a medidas não convencionais.
                 </p>
                 <p>
-                    O usuário deve inserir pelo menos dois parâmetros para calcular todos os outros .
+                    O usuário deve inserir um parâmetro para calcular todos os outros .
                 </p>
                 <br>
-                São usadas as fórmulas:
+                São usadas os seguintes valores:(Todos relacionados a metros)
                 <br>
-                <br>
-                Volume = 1/3 . &pi; . raio<sup>2</sup> . altura
-                <br>
-                Área da superfície =  &pi; . altura +  &pi; . raio<sup>2</sup>
-                <br>
-                Perímetro ou circuferência da base = 2 . &pi; . raio
-                <br>
-                Diâmetro da base = 2 . raio
                 <br>
                 <p>
-                    O cálculo da área da superfície (área da base + área lateral da superfície) é medido em unidade ao quadrado(u<sup>2</sup>) e retornado ao usuário .
+                    Centímetros = 0,01 metros
                 </p>
+                <p>
+                    Quilometros = 1000 metros
+                </p>
+                <p>
+                    Metros = 1 metros
+                </p>
+                <p>
+                    Pés = 0,3048 metros
+                </p>
+                <p>
+                    Polegadas = 0,0254 metros
+                </p>
+                <p>
+                    Milhas = 1609,344 metros
+                </p>
+                <p>
+                    Jardas = 0,9144 metros
+                </p>
+                <p>
+                    Minlhas naúticas = 1882 metros
+                </p>
+                <p>
+                    Léguas = 4828,03 metros
+                </p>
+                <p>
+                    Rod = 5,0292 metros
+                </p>
+                <br>
                 <p>
                     O cálculo de volume é medido em unidade ao cubo (u<sup>3</sup>) e retornado ao usuário .
                 </p>
                 <p>
-                    Essa ferramenta necessita de dois parâmetros ou mais que possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,é preciso observar essas hipóteses .
+                    Essa ferramenta necessita de um parâmetro para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,é preciso observar essas hipóteses .
                 </p>
         </div>
 
