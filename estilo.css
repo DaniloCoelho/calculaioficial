@@ -32,8 +32,6 @@ h1{
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    
-
 }
 .calculadora{
     
@@ -72,8 +70,6 @@ h1{
     margin: auto;
     font-size: 18px;
     text-align: left;
-    
-    
 }
 .campo{
     max-width: 620px;
@@ -103,8 +99,6 @@ h1{
     margin: auto;
     max-width: 650px;
     min-width: 100px;
-
-    
 }
 .tabelapar{
     background-color: rgb(220, 230, 255);
@@ -218,7 +212,6 @@ ul li:hover ul{
 .rodape{
    width: 50%; 
    height: 300px;
-   /*background-color: rgb(155, 161, 164);*/
    color: rgb(17, 17, 18);
 }
 .div_anuncio_rodape{
@@ -327,8 +320,6 @@ ul li:hover ul{
         display: block;
     }
 }
-
-
 @media(max-width: 700px) {
     .fundo {
         text-align: center;
@@ -369,7 +360,6 @@ ul li:hover ul{
         min-width: 10px; 
         background-color: rgb(245, 231, 154);
     }
-    
     .tabelapar{
         font-size: 10.5px;
         padding: 1px;
@@ -451,9 +441,6 @@ ul li:hover ul{
         float: right;
         margin: right 10px;
         padding: 0px;
-        
-        
-        
     }
     nav ul li{
         position:relative;
@@ -463,19 +450,13 @@ ul li:hover ul{
         height: 100%;
         text-align: left; 
         margin-right: 2px;
-        
-        
     }
-    
     nav ul li a {
         color: rgb(51, 49, 153);
         font-size: 15px;
         padding-left: 0px;
         border-radius: 2px; 
-        text-align: center;
-        
-        
-        
+        text-align: center; 
     }
     ul ul{
         position: absolute;
@@ -486,22 +467,13 @@ ul li:hover ul{
         margin: 0px;
         border-radius: 8px;
         line-height: 15px;
-        
         margin-left: -50px;
-        
-        
-    
     }
-    a.active , a:hover{
-        
+    a.active , a:hover{  
         background-image: linear-gradient( rgb(83, 91, 147) , rgb(168, 170, 170));
         font-size: 15px;
-        /*padding-left: 4px;
-        padding-top: 4px;*/
         padding-right: 10px;
-        line-height: 40px;
-        
-        
+        line-height: 40px;  
     }
     h1{
         font-size: 16px;
@@ -515,7 +487,6 @@ ul li:hover ul{
         width: 95%;
         margin-left: auto;
         margin-right: auto;
-    
     }
     .rodape{
         width: 99%; 
@@ -527,7 +498,6 @@ ul li:hover ul{
         width: 99%;
         text-align: center;
         border-radius: 2px;
-        
     }
     .aparecer{
         display: none;
@@ -535,8 +505,7 @@ ul li:hover ul{
     .aparecer_1{
         display: block;
         
-        border-top: 3px solid rgb(127, 127, 190) ;
-        
+        border-top: 3px solid rgb(127, 127, 190) ;  
     }
     #inicio{
         display: none;
