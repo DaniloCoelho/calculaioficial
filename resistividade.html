@@ -36,6 +36,7 @@
                             <li style="min-width: 250px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li><br>
                             <li class="label_dropdown"> Elétrica / Eletrônica </li>
                             <li style="min-width: 250px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
+                            <li style="min-width: 250px;"><a href="resistividade.html">Resistência de um condutor</a></li>
                             <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>  
                         </ul>  
                     </li>
@@ -62,23 +63,79 @@
             </div>
             <div class="linha"></div>
             <div class="calculadora">
-                <h1>Conversor de medidas de comprimento</h1>
-                <img src="img/medidas1.ng.jpg" alt="">
+                <h1>Resistência de um condutor</h1>
+                <br>
+                <img src="img/condutor.png" alt="">
                 <table class="caixa" id="table1">
                     <tr>
-                        <td>centímetros</td>
+                        <td>
+                            Material
+                        </td>
+                        <td>
+                            <select name="material" id="material">
+                                <option value="antimonio ">Antimônio
+                                </option>
+                                <option value="aluminio">
+                                    Alumínio
+                                </option>
+                                <option value="bronze">
+                                    Bronze
+                                </option>
+                                <option value="chumbo">
+                                    Chumbo
+                                </option>
+                                <option value="cobre">
+                                    Cobre
+                                </option>
+                                <option value="constantan">
+                                    Constantan
+                                </option>
+                                <option value="estanho">
+                                    Estanho
+                                </option>
+                                <option value="grafite">
+                                    Grafite
+                                </option>
+                                <option value="ferro">
+                                    Ferro puro
+                                </option>
+                                <option value="latao">
+                                    Latão 
+                                </option>
+                                <option value="mercurio">
+                                    Mercúrio
+                                </option>
+                                <option value="nicromo">
+                                    Nicromo
+                                </option>
+                                <option value="niquel">
+                                    Níquel
+                                </option>
+                                <option value="ouro">
+                                    Ouro
+                                </option>
+                                <option value="prata">
+                                    Prata
+                                </option>
+                                <option value="tungstenio">
+                                    Tungstênio
+                                </option>
+                                <option value="zinco">
+                                    Zinco
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>resistência</td>
                         <td><input type="number" name="" id="resistencia" class="campo"></td>
                     </tr>
                     <tr>
-                        <td>quilometros</td>
-                        <td><input type="number" name="" id="resistividade" class="campo"></td>
-                    </tr>
-                    <tr>
-                        <td>metros</td>
+                        <td>comprimento</td>
                         <td><input type="number" name="" id="comprimento" class="campo"></td>
                     </tr>
                     <tr>
-                        <td>pés</td>
+                        <td>área do condutor</td>
                         <td><input type="number" name="" id="area" class="campo"></td>
                     </tr>
                 </table>
@@ -101,7 +158,7 @@
         <div class="rodape" style="margin: auto; text-align: left;">
             <p>Este site/ferramenta não se responsabiliza por danos a qualquer parte , pois esta ferramenta serve como simulação e com valores , se essa simulação for para uso profissional ou comercial é recomendado a consulta de um profissional especializado .
             </p>
-            <h1>Metodologia Conversor de medidas de comprimento</h1>
+            <h1>Resistência de um condutor</h1>
                 <br>
                 <p> Nessa ferrramenta usamos as relações de medidas de comprimento </p>
                 <p>
@@ -155,6 +212,6 @@
 
     </div>
 
-    <script src="logica_comprimento.js"></script>
+    <script src="logica resistividade.js"></script>
 </body>
 </html>
