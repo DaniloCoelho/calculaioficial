@@ -24,12 +24,12 @@ function calcular(){
     }
     if(document.getElementById('material')){
         var material = document.getElementById('material')
-        var mater = 0
+        var mater = null
     }
     if(material.value == "aluminio" ){
         mater = 0.02857
     }
-    if(material.value == "antimonia"){
+    if(material.value == "antimonio"){
         mater = 0.417
     }
     if(material.value == "bronze"){
@@ -110,6 +110,10 @@ function calcular(){
     Tungstêio   0.055
     Zinco       0.056*/
     //resis com are
+    //if(resis < 0|| com <0 || are <0){
+    //    erro_negativos()
+    //}
+
     if(resis && com && !are && !control){
         are = (mater*com)/resis
         control = true
@@ -128,23 +132,23 @@ function calcular(){
 
     function exibir(){
         if(resistencia){
-            resistencia.value = resis.toFixed(2)
+            resistencia.value = resis.toFixed(4)
         }
         else{
             resistencia = document.getElementById('resistencia')
-            resistencia.value = resis.toFixed(2)
+            resistencia.value = resis.toFixed(4)
         }
         if(comprimento){
-            comprimento.value = com.toFixed(2)
+            comprimento.value = com.toFixed(4)
         }else{
             comprimento = document.getElementById('comprimento')
-            comprimento.value = com.toFixed(2)
+            comprimento.value = com.toFixed(4)
         }
         if(area){
-            area.value = are.toFixed(2) 
+            area.value = are.toFixed(4) 
         }else{
             area = document.getElementById('area')
-            area.value = are.toFixed(2)
+            area.value = are.toFixed(4)
         }
     }
 }
