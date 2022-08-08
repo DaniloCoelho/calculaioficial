@@ -12,36 +12,45 @@
     <div class="fundo">
         <div>
             <nav style="z-index:10 ; clear: both;">
-                <label class="logo">Calcule aí!</label>
+                <a href="default.php" class="logo" style="text-decoration: none;"><label class="logo"  class="logo">Calcule aí!</label></a>
+                
                 <ul>
                     <li>
-                        <a href="default.php">Inicio</a>
+                        <a href="default.php" id="inicio">Inicio</a>
                     </li>
                     <li><a>Calculadoras&#9662;</a>
                         <ul>
                             <li class="label_dropdown">Financeiro</li>
                             
-                            <li style="min-width: 200px;"><a href="financiamento.html">Financiamentos</a></li>
+                            <li style="min-width: 250px;"><a href="financiamento.html">Financiamentos</a></li>
                             
-                            <li style="min-width: 200px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
-                            <li style="min-width: 200px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
-                            <li style="min-width: 200px;"><a href="precificar.html">Precificar seu trabalho</a></li>
+                            <li style="min-width: 250px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                            <li style="min-width: 250px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                            <li style="min-width: 250px;"><a href="precificar.html">Precificar seu trabalho</a></li>
                             <li class="label_dropdown"> Geometria </li>
                             
-                            <li style="min-width: 200px;"><a href="cilindro.html">Cilindro</a></li>
-                            <li style="min-width: 200px;"><a href="circulo.html">Circulo</a></li>
-                            <li style="min-width: 200px;"><a href="cone.html">Cone</a></li>
-                            <li style="min-width: 200px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
-                            <li style="min-width: 200px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li><br>
+                            <li style="min-width: 250px;"><a href="cilindro.html">Cilindro</a></li>
+                            <li style="min-width: 250px;"><a href="circulo.html">Circulo</a></li>
+                            <li style="min-width: 250px;"><a href="cone.html">Cone</a></li>
+                            <li style="min-width: 250px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                            <li style="min-width: 250px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li>
                             <li class="label_dropdown"> Elétrica / Eletrônica </li>
-                            <li style="min-width: 200px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li><br>
-                            <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>
-                            
-                            
-                        </ul>
-                        
+                            <li style="min-width: 250px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
+                            <li style="min-width: 250px;"><a href="resistividade.html">Resistência de um condutor</a></li>
+                            <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>  
+                        </ul>  
                     </li>
-                    <li class="aparecer"><a href="metodologias.html">Metodologias</a></li>
+                    <li><a>Conversores&#9662;</a>
+                        <ul style="margin-left: -150px;">
+                            <li class="label_dropdown"> Conversores</li>
+                            <li style="min-width: 250px; "><a href="medidas_comprimento.html">Medidas de comprimento</a></li>
+                            <li style="min-width: 250px;"><a href="conversor_de_bases.html">Conversor de bases</a></li>
+                            <!--<li style="min-width: 250px;"><a href="combustivel.html">Conversor
+                            </a></li>
+                            <li style="min-width: 250px;"><a href="precificar.html">xxxx</a></li>-->
+                              
+                        </ul>  
+                    </li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
 
@@ -90,12 +99,10 @@
                     <h1><input type="button" value="Calcular" onclick="calcular()" class="botao"> <input type="button" value="Limpar" onclick="limpar()" class="botao"> </h1>
                 </div>
                 <br>
-
             </div>
             <div class="linha"></div>
             <div class="div_anuncio">
                 <!--anuncio-->
-                
             </div>
         </div>
         <div class="linha"></div>
@@ -108,41 +115,49 @@
                 <br>
                 <p> Nessa ferrramenta usamos as relações de cálculos de potências , divisões ,somas e multiplicações . </p>
                 <p>
-                    Indicado para estudantes , eletricistas e pessoas que queiram sanar algumas dúvidas.
-                </p>
-                <p>
-                    O usuário deve inserir dois parâmetros para calcular todos os outros .
+                    Indicado para estudantes , eletricistas , técnicos em Eletrônica , sistemas computacionais e pessoas que queiram sanar algumas dúvidas.
                 </p>
                 <br>
-                São usadas as fórmulas:
-                <br>
-                <br>
-                Potência = Tensão . Corrente
-                <br>
-                Tensão = Resistência . Corrente
-                <br>
-                Corrente = Potência / Tensão
-                <br>
-                Resistência = Tensão / Corrente
-                <br>
-                E todas as sua relações.
-                <br>
+                <p>
+                    O usuário deve inserir a base primeiro , depois o número correspondente para calcular todos os outros .
+                </p>
                 <br>
                 <p>
-                    O cálculo da Potência é medido em Watts e retornado ao usuário .
+                    Primeiro a base escolhida é transformada para base decimal , para depois ser transformado para as outras bases e depois ser exibido.
+                </p>
+                <br>
+                <p>
+                    Exemplo de como são transformados para decimal :
+                    <br>
+                    <p>Escolhendo a base 8 e o número 6213 é calculado da forma a seguir :
+                    <br>
+                    <br>
+                    <p>
+                        ((8<sup>3</sup>)*6) + ((8<sup>2</sup>)*2) + ((8<sup>1</sup>)*1) + ((8<sup>0</sup>)*3) = 3211
+                    </p>
+                    <br>
+                    <p>
+                        Logo depois transformamos para as outras bases realizando divisões inteiras (númera decimal / base) exemplo :
+                    </p>
+                    <br>
+                    <p>
+                        3211/ 8 = resultado / 8 até não pode mais . E o resto das divisões será armazenado e lido da direita para esquerda , esse será o resultado : 6213
+                    </p>
+
+
+                    </p>  
+
+
+                    
+                </p>
+                
+                <br>
+                <p>
+                   
                 </p>
                 <p>
-                    O cálculo da Tensão é medido em Volts e retornado ao usuário .
+                    Essa ferramenta necessita da informação da base e do número a ser convertido para calcular todos os outros parâmetros. Também há restrição contra números negativos e ponto flutuante , em breve teremos uma calculadora com essas características .
                 </p>
-                <p>
-                    O cálculo da Corrente é medido em Ampére e retornado ao usuário .
-                </p>
-                <p>
-                    O cálculo da Resistência é medido em Ohm e retornado ao usuário .
-                </p>
-                <p>
-                    Essa ferramenta necessita de dois parâmetros possuam relação entre si para calcular todos os outros parâmetros. Também há restrição contra números negativos , pois não há como uma medida ser negativa ,exceto a Tensão,é preciso observar essas hipóteses .
-                </p>-->
         </div>
 
     </div>
