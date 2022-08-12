@@ -139,7 +139,7 @@ nav{
     z-index:1 ;
     
 }
-label.logo{
+.logo{
     color: rgb(51, 49, 153);
     font-size: 30px;
     line-height: 30px;
@@ -147,7 +147,7 @@ label.logo{
     font-weight: bold;
     margin-left: 5px;
 }
-label.logo:hover{
+.logo:hover{
     border-radius: 5px;  
     padding-left: 5px;
     background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
@@ -421,17 +421,24 @@ ul li:hover ul{
         color: crimson ;
         font-size: 11px;
     }
-    label.logo{
+    .logo{
         color: rgb(51, 49, 153);
         font-size: 14px;
         line-height: 12px;
         padding-top: 11px;
         font-weight: bold;
         text-align: left;
-        margin-left: -48%;
         position:absolute;
         height: 100%;
+        display: block;
         
+    }
+    .logo:hover{
+        border-radius: 5px;  
+        padding-left: 5px;
+        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
+        padding: 0px;
+        color: rgb(51, 49, 153);
     }
     nav{
         
@@ -511,7 +518,6 @@ ul li:hover ul{
     }
     .aparecer_1{
         display: block;
-        
         border-top: 3px solid rgb(127, 127, 190) ;  
     }
     #inicio{

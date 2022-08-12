@@ -145,7 +145,7 @@ function calcular(){
 
             if(i%2 == 0){
                 let row_2 = document.createElement('tr')
-                row_2.classList = "tabelapar"
+                row_2.classList = "tabelpar"
                 let row_2_data_1 = document.createElement('td')
                 row_2_data_1.innerHTML = str
                 let row_2_data_2 = document.createElement('td')
@@ -156,7 +156,7 @@ function calcular(){
             }
             if(i%2 != 0){
                 let row_2 = document.createElement('tr')
-                row_2.classList = "tabelaimpar"
+                row_2.classList = "tabelimpar"
                 let row_2_data_1 = document.createElement('td')
                 row_2_data_1.innerHTML = str
                 let row_2_data_2 = document.createElement('td')
