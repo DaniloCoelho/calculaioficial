@@ -49,7 +49,7 @@ function calcular(){
 
     }
     else if(!qui && lib && !sto && !onc && !tol && !tcu && !tdes && !control){
-        qui = lib * 0,453592
+        qui = lib * 0.453592
         sto = qui * 0.157473
         onc = qui * 35.274
         tol = qui * 0.001
