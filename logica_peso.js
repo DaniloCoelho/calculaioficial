@@ -163,10 +163,8 @@ function calcular(){
             toneldadeslocamento = document.getElementById('toneldadeslocamento')
             toneldadeslocamento.value = tdes
         }
-    }
-    
+    } 
 }
-
 function limpar(){
     if(quilograma){
         quilograma.value = null
