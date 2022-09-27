@@ -129,84 +129,7 @@ h1{
     color: crimson ;
     font-size: 14px;
 }
-nav{
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
-    height: 50px;
-    width: 99%;
-    position:relative;
-    box-shadow:7px 4px 4px rgb(156, 156, 156);
-    border-radius: 10px;
-    z-index:1 ;
-    
-}
-.logo{
-    color: rgb(51, 49, 153);
-    font-size: 30px;
-    line-height: 30px;
-    padding: 10px;
-    font-weight: bold;
-    margin-left: 5px;
-}
-.logo:hover{
-    border-radius: 5px;  
-    padding-left: 5px;
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
 
-}
-
-nav ul{
-    float: right;
-    margin: right 10px;
-    box-shadow: inset;
-    margin-top:  0px;
-     
-}
-nav ul li{
-    display: inline-block;
-    line-height: 50px;
-    margin: 0 5px;  
-}
-nav ul li a {
-    color: rgb(51, 49, 153);
-    font-size: 17px;
-    padding: 0px;
-    border-radius: 5px;
-    text-decoration:none;
-    display: block;
-    padding-left: 5px;
-    padding-right: 5px;
-    
-}
-
-a.active , a:hover {
-    border-radius: 5px;
-    color: rgb(255, 255, 255);  
-    padding-left: 5px;
-    background-image: linear-gradient( rgb(83, 91, 147) , rgb(168, 170, 170));
-    
-}
-ul ul{
-    position: absolute;
-    min-width: 200px;
-    display: none;
-    background-color: rgb(221, 231, 236);
-    padding: 0px;
-    margin: 0px;
-    border-radius: 10px;
-    line-height: 15px;
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
-
-}
-ul ul li{
-    display: block;
-    padding: 0px;
-    margin: 0px;
-    margin-top: 0px; 
-}
-ul li:hover ul{
-    display: block;
-    position: absolute;
-}
 .fonte_sizesac{
     font-size: 14px;
     transition: 5%;
@@ -226,27 +149,14 @@ ul li:hover ul{
     margin: auto;
     
 }
-.label_dropdown{
-    background-image: linear-gradient(to right, rgb(9, 3, 175) , rgb(112, 131, 244));
-    color: white;
-    font-size: 14px;
-    line-height: 20px;
-}
-.aparecer{
-    display: visible;
-}
-.aparecer_1{
-    display: none;
-}
+
 .field{
     width: 60%;
     padding: 3px;
     margin-top: 5px;
     background-color: white;
 }
-#inicio{
-    display: block;
-}
+
 @media(max-width: 1150px){
     .fundo {
         text-align: center;
@@ -312,20 +222,6 @@ ul li:hover ul{
         font-size: 17px;
         text-align: center;
     }
-    .label_dropdown{
-        background-image: linear-gradient(to right, rgb(9, 3, 175) , rgb(112, 131, 244));
-        color: white;
-        font-size: 12px;
-    }
-    .aparecer{
-        display: visible;
-    }
-    .aparecer_1{
-        display: none;
-    }
-    #inicio{
-        display: block;
-    }
 }
 @media(max-width: 700px) {
     .fundo {
@@ -335,6 +231,7 @@ ul li:hover ul{
         background-color: rgb(255, 255, 255);
         margin: auto;
     }
+    
     .linha{
         padding-top: 10px;
     }
@@ -421,74 +318,8 @@ ul li:hover ul{
         color: crimson ;
         font-size: 11px;
     }
-    .logo{
-        color: rgb(51, 49, 153);
-        font-size: 14px;
-        line-height: 12px;
-        padding-top: 11px;
-        font-weight: bold;
-        text-align: left;
-        position:absolute;
-        height: 100%;
-        display: block;
-        
-    }
-    .logo:hover{
-        border-radius: 5px;  
-        padding-left: 5px;
-        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
-        padding: 0px;
-        color: rgb(51, 49, 153);
-    }
-    nav{
-        
-        width: 99%;
-        position: relative;
-        box-shadow:4px 2px 2px rgb(156, 156, 156);
-        border-radius: 3px;
-        margin-right: 10px;
-        height: 40px;
-        background-image: linear-gradient(to right, rgb(198, 220, 231) , rgb(228, 248, 250));
-        
-    }
-    nav ul{
-        float: right;
-        margin: right 10px;
-        padding: 0px;
-    }
-    nav ul li{
-        position:relative;
-        display: inline-block;
-        line-height: 40px;
-        margin: 0px;
-        height: 100%;
-        text-align: left; 
-        margin-right: 2px;
-    }
-    nav ul li a {
-        color: rgb(51, 49, 153);
-        font-size: 15px;
-        padding-left: 0px;
-        border-radius: 2px; 
-        text-align: center; 
-    }
-    ul ul{
-        position: absolute;
-        min-width: 200px;
-        display: none;
-        background-color: rgb(221, 231, 236);
-        padding: 0px;
-        margin: 0px;
-        border-radius: 8px;
-        line-height: 15px;
-        margin-left: -50px;
-    }
-    a.active , a:hover{  
-        background-image: linear-gradient( rgb(83, 91, 147) , rgb(168, 170, 170));
-        font-size: 15px;
-        padding-right: 10px;
-        line-height: 40px;  
-    }
+    
+    
     h1{
         font-size: 16px;
         text-align: center;
@@ -505,23 +336,5 @@ ul li:hover ul{
     .rodape{
         width: 99%; 
      }
-    .label_dropdown{
-        background-image: linear-gradient(to right, rgb(9, 3, 175) , rgb(112, 131, 244));
-        color: white;
-        font-size: 8px;
-        width: 99%;
-        text-align: center;
-        border-radius: 2px;
-    }
-    .aparecer{
-        display: none;
-    }
-    .aparecer_1{
-        display: block;
-        border-top: 3px solid rgb(127, 127, 190) ;  
-    }
-    #inicio{
-        display: none;
-    }
     
 }

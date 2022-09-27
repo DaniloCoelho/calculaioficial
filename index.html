@@ -6,58 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <link rel="stylesheet" href="slide.css">
+    <link rel="stylesheet" href="menudropdown.css">
     <title>Calcular</title>
 </head>
 <body>
     <div class="fundo" id="fundo">
-        <div>
-            <nav style="z-index:10 ; clear: both;">
-                <a href="default.php" class="logo" style="text-decoration: none;">Calcule aí!</a>
-                
-                <ul>
-                    <li>
-                        <a href="default.php" id="inicio">Inicio</a>
-                    </li>
-                    <li><a>Calculadoras&#9662;</a>
-                        <ul>
-                            <li class="label_dropdown">Financeiro</li>
-                            
-                            <li style="min-width: 250px;"><a href="financiamento.html">Financiamentos</a></li>
-                            
-                            <li style="min-width: 250px;"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
-                            <li style="min-width: 250px;"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
-                            <li style="min-width: 250px;"><a href="precificar.html">Precificar seu trabalho</a></li>
-                            <li class="label_dropdown"> Geometria </li>
-                            
-                            <li style="min-width: 250px;"><a href="cilindro.html">Cilindro</a></li>
-                            <li style="min-width: 250px;"><a href="circulo.html">Circulo</a></li>
-                            <li style="min-width: 250px;"><a href="cone.html">Cone</a></li>
-                            <li style="min-width: 250px;"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
-                            <li style="min-width: 250px;"><a href="piramidequadrada.html">Pirâmide quadrada</a></li>
-                            <li class="label_dropdown"> Elétrica / Eletrônica </li>
-                            <li style="min-width: 250px;"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
-                            <li style="min-width: 250px;"><a href="resistividade.html">Resistência de um condutor</a></li>
-                            <li class="aparecer_1"><a href="metodologias.html">Metodologias</a></li>  
-                        </ul>  
-                    </li>
-                    <li><a>Conversores&#9662;</a>
-                        <ul style="margin-left: -150px;">
-                            <li class="label_dropdown"> Conversores</li>
-                            <li style="min-width: 250px; "><a href="medidas_comprimento.html">Medidas de comprimento</a></li>
-                            <li style="min-width: 250px;"><a href="conversor_de_bases.html">Bases númericas</a></li>
-                            <li style="min-width: 250px;"><a href="conversor_de_temperatura.html">Medidas de Temperatura
-                            </a></li>
-                            <li style="min-width: 250px;"><a href="conversor_de_peso.html">Medidas de Peso
-                            </a></li>
-                            
-                              
-                        </ul>  
-                    </li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
+        <nav class="web">
+            <a href="#" class="logo">Calcule aí!</a>
+            <ul class="ulprincipal">
+                <li class="liprincipal">
+                    <a href="default.php" class="dropcalculadoras">Início</a>
+                </li>
+                <li class="liprincipal">
+                    <a class="dropcalculadoras">Calculadoras&#9662;</a>
+                    <ul class="ulsecundario">
+                        <li class="label_dropdown">Financeiro</li>
+                        <li class="lisecundario"><a href="financiamento.html">Financiamentos</a></li>
+                        <li class="lisecundario"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                        <li class="lisecundario"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                        <li class="lisecundario"><a href="precificar.html">Precificar seu trabalho</a></li>
+                        <li class="label_dropdown"> Geometria </li>
+                        <li class="lisecundario"><a href="cilindro.html">Cilindro</a></li>
+                        <li class="lisecundario"><a href="circulo.html">Circulo</a></li>
+                        <li class="lisecundario"><a href="cone.html">Cone</a></li>
+                        <li class="lisecundario"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                        <li class="lisecundario"><a href="piramidequadrada.html">Pirâmide quadrada</a></li>
+                        <li class="label_dropdown"> Elétrica / Eletrônica </li>
+                        <li class="lisecundario"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
+                        <li class="lisecundario"><a href="resistividade.html">Resistência de um condutor</a></li>
+                    </ul>
+                </li>
+                    
+                <li class="liprincipal">
+                    <a class="dropcalculadoras">Conversores&#9662;</a>
+                    <ul class="ulsecundario">
+                        <li class="lisecundario"><a href="medidas_comprimento.html">Medidas de comprimento</a></li>
+                        <li class="lisecundario"><a href="conversor_de_bases.html">Bases númericas</a></li>
+                        <li class="lisecundario"><a href="conversor_de_temperatura.html">Medidas de Temperatura</a></li>
+                        <li class="lisecundario"><a href="conversor_de_peso.html">Medidas de Peso</a></li>
+                    </ul>
+                </li>
+                <li class="liprincipal">
+                    <a href="contato.html" class="dropcalculadoras">Contato</a>
+                </li>
+            
+            </ul>
+        </nav>
+        <nav class="mobile">
+            <input type="checkbox" name="radio-btn" class="radio">
+            <img src="img/icone menu.png" class="menu">
+            <img src="img/icone_menu2.png" class="menuv" > 
+            <a href="#" class="logo">Calcule aí!</a>
+            <ul class="ulprincipal">
+                <li class="liprincipal">
+                    <a href="default.php" class="dropcalculadoras">Início</a>
+                </li>
+                <li class="liprincipal">
+                    <a class="dropcalculadoras">Calculadoras&#9662;</a>
+                    <ul class="ulsecundario">
+                        <li class="label_dropdown">Financeiro</li>
+                        <li class="lisecundario"><a href="financiamento.html">Financiamentos</a></li>
+                        <li class="lisecundario"><a href="valor_futuro.html">Valor Futuro de capital</a></li>
+                        <li class="lisecundario"><a href="combustivel.html">Autonomia / Valor de combustível</a></li>
+                        <li class="lisecundario"><a href="precificar.html">Precificar seu trabalho</a></li>
+                        <li class="label_dropdown"> Geometria </li>
+                        <li class="lisecundario"><a href="cilindro.html">Cilindro</a></li>
+                        <li class="lisecundario"><a href="circulo.html">Circulo</a></li>
+                        <li class="lisecundario"><a href="cone.html">Cone</a></li>
+                        <li class="lisecundario"><a href="pitagoras2.html">Triângulo (sen ,cos ,tan)</a></li>
+                        <li class="lisecundario"><a href="piramidequadrada.html">Pirâmide quadrada</a></li>
+                        <li class="label_dropdown"> Elétrica / Eletrônica </li>
+                        <li class="lisecundario"><a href="leideohm.html">Potência /Tensão /Corrente</a></li>
+                        <li class="lisecundario"><a href="resistividade.html">Resistência de um condutor</a></li>
+                    </ul>
+                </li>
+                    
+                <li class="liprincipal">
+                    <a class="dropcalculadoras">Conversores&#9662;</a>
+                    <ul class="ulsecundario">
+                        <li class="lisecundario"><a href="medidas_comprimento.html">Medidas de comprimento</a></li>
+                        <li class="lisecundario"><a href="conversor_de_bases.html">Bases númericas</a></li>
+                        <li class="lisecundario"><a href="conversor_de_temperatura.html">Medidas de Temperatura</a></li>
+                        <li class="lisecundario"><a href="conversor_de_peso.html">Medidas de Peso</a></li>
+                    </ul>
+                </li>
+                <li class="liprincipal">
+                    <a href="contato.html" class="dropcalculadoras">Contato</a>
+                </li>
+            
+            </ul>
 
-            </nav>
-        </div>
+        </nav>
         <div class="linha"></div>
         <div class="div_central">
             <div class="div_anuncio">
