@@ -229,7 +229,7 @@ h1{
         justify-content: center;
         justify-items: center;
         background-color: rgb(255, 255, 255);
-        margin: auto;
+        margin: 0px;
     }
     
     .linha{
@@ -287,9 +287,9 @@ h1{
         min-width: 99%;
         width: 99%;
         text-align: center;
-        padding: 1px;
+        padding: 0px;
         border-radius: 5px;
-        margin: auto;
+        margin: 0px;
         font-size:12px;
         background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
     }
@@ -327,6 +327,7 @@ h1{
     }
     .div_central{
         display:block;
+        padding: 0px;
     }
     .div_anuncio{
         width: 95%;
