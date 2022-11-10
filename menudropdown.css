@@ -4,16 +4,17 @@
 }
 a{
     text-decoration: none;
+    color: inherit;
 }
 
 a:link{
-    color: rgb(51, 49, 153);
+    color :none;
 }
 a:hover{
     color: white;
 }
 .web{
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
+    background-color: rgb(9, 9, 122);
     text-align: end;
     box-shadow: 0px 3px 10px rgb(157, 157, 197) ;
     border-radius: 3px;
@@ -26,6 +27,7 @@ a:hover{
     display: none;
 }
 .logo{
+    color: white;
     list-style: none;
     text-decoration: none;
     font-size: 20px;
@@ -40,7 +42,7 @@ a:hover{
     font-size: 17px;
     display: inline-flex;
     margin-right: 2%;
-    color: rgb(27, 27, 137);  
+    color: rgb(255, 255, 255);
     z-index:1;
 }
 .liprincipal{
@@ -48,13 +50,12 @@ a:hover{
     list-style: none;
 }
 .dropcalculadoras{
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
     text-align: center;
     padding: 10px; 
     
 }
 .dropcalculadoras:hover{
-    background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
+    background-image: linear-gradient( rgb(82, 96, 186) , rgb(10, 32, 173));
     color: white;
     border-radius: 5px;
 }
@@ -63,11 +64,12 @@ a:hover{
     display: none;
     z-index: 1;
     position: absolute;
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
+    background-color: rgb(255, 255, 255);
     margin-left: -110px;
     width: 250px;
     box-shadow: 0px 3px 10px rgb(157, 157, 197) ;
     margin-top: -5px;
+    color: rgb(0, 0, 0);
 }
 .lisecundario{
     padding: 5px;
@@ -76,7 +78,13 @@ a:hover{
     text-align: center;
     line-height: 25px;
     margin: 0px;
-
+    
+}
+.borda_abaixo{
+    margin-left: 5px;
+    width: 60%;
+    height: 1px;
+    background-color: blue;
 }
 .liprincipal.active ,:hover ~ .ulsecundario{
     display: block;
@@ -92,7 +100,7 @@ a:hover{
     
 }
 .lisecundario:hover{
-    background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
+    background-image: linear-gradient( rgb(83, 91, 147) , rgb(12, 1, 170));
     text-align: center;
     color: white;
     z-index: 1;
@@ -100,18 +108,18 @@ a:hover{
     border-radius: 5px;
 }
 .label_dropdown{
-    background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
-    color: white;
+    background-image: linear-gradient( rgb(193, 198, 236) , rgb(236, 236, 255));
+    color: rgb(23, 5, 182);
     font-size: 14px;
     line-height: 20px;
     text-align: center;
+    font-weight: bold;
 }
 @media(max-width: 700px){
     .web{
         display: none;
     }
     .mobile{
-        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
         text-align: left;
         box-shadow: 0px 0px 0px 0px rgb(157, 157, 197) ;
         border-radius: 2px;
@@ -121,9 +129,11 @@ a:hover{
         display:block;
         height: 40px;
         padding-top: 10px;
+        background-color: rgb(9, 9, 122);
         
     }
     .logo{
+        color: white;
         list-style: none;
         text-decoration: none;
         font-size: 12px;
@@ -143,34 +153,32 @@ a:hover{
         position:absolute;
         width: 25px;
         height: 25px;
+        transition: opacity 1s;
+        
+        
+        
            
     }
     .menuv{
-        display: none;
+        opacity: 0%;
+        display: relative;
         margin-left:20px;
         padding-right: 20px;
         position:absolute;
         width: 25px;
         height: 25px;
-        
+        transition: opacity 1s;
     }
+    
     .ulprincipal{
         width: 100%;
         font-size: 12px;
-        display: none;
-        color: rgb(27, 27, 137); 
+        display: block;
         text-align: left;
         position: relative;
-        
-        
-    }
-    .radio:checked ~ .ulprincipal{
-        font-size: 12px;
-        display:block;
-        margin-right: 0px;
-        color: rgb(27, 27, 137);
-        position:relative;
-        
+        margin-left: -100%;
+        transition: margin-left 0.6s;
+         
     }
     .radio{
         filter: opacity(0%);
@@ -179,13 +187,29 @@ a:hover{
         height: 30px;
         position: absolute;
         z-index: 1;
+        
+    }
+    .radio:checked ~ .ulprincipal{
+        font-size: 12px;
+        display:block;
+        margin-right: 0px;
+        
+        position:relative;
+        margin-left: 0%;
+        transition: margin-left 0.6s;
     }
     
+    
     .radio:checked ~ .menu{
-        display: none; 
+        /*display: none;*/
+        opacity: 0%;
+        
+        
     }
     .radio:checked ~ .menuv{
-        display: unset;   
+        /*display: unset;  */
+        opacity: 100%;
+        
     }
     .radioI{
         filter: opacity(0%);
@@ -195,33 +219,40 @@ a:hover{
         position: absolute;
         z-index: 1;
         padding-left:300px;
+        
     }
     .radioI:checked ~ .ulsecundarioI{
-        display:block;
+        display:block; 
     }
+    
     .radioI:checked ~ .dropcalculadoras{
-        background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
+        background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 21, 170));
         color: white;
         border-radius: 5px;
         position:relative;
         display: block;
+        
     }
     .liprincipal{
         line-height: 15px;
         list-style: none;
         width: 100%;
         margin-top: 0px;
+        font-size: 14px;
         
     }
     .dropcalculadoras{
-        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
+        background-color: rgb(236, 249, 254);
         text-align: center;
         margin: 0px;
         position: relative;
         display:block;
+        color: black;
+        
+        
     }
     .dropcalculadoras:hover{
-        background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
+        background-image: linear-gradient( rgb(82, 96, 186) , rgb(10, 32, 173));
         color: white;
         border-radius: 5px;
         position:relative;
@@ -231,8 +262,7 @@ a:hover{
         font-size: 12px;
         display:none;
         position:relative;
-        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
-        margin-left: 0px;
+        background-image: linear-gradient( rgb(255, 255, 255) , rgb(254, 254, 254));
         margin: 0px;
         width: 100%;
         box-shadow: 0px 3px 10px rgb(157, 157, 197) ;
@@ -240,25 +270,33 @@ a:hover{
     .lisecundario{
         padding: 5px;
         list-style: none;
-        font-size: 13px;
+        font-size: 14px;
         text-align: left;
         line-height: 20px;
         margin: 0px;
         width: 100%;
+        color: black;
     }
     .lisecundario:hover{
-        background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
+        background-image: linear-gradient( rgb(83, 91, 147) , rgb(12, 1, 170));
         text-align: left;
         color: white;
         font-size: 13px;
         border-radius: 3px; 
+        
     }
     .label_dropdown{
-        background-image: linear-gradient( rgb(83, 91, 147) , rgb(1, 170, 170));
-        color: white;
-        font-size: 8px;
+        background-image: linear-gradient( rgb(254, 255, 255) , rgb(255, 255, 255));
+        color: rgb(0, 0, 0);
+        font-size: 10px;
         width: 99%;
         text-align: center;
         border-radius: 2px;
+    }
+    .borda_abaixo{
+        margin-left: 2px;
+        width: 90%;
+        height: 1px;
+        background-color: blue;
     }
 }

@@ -7,9 +7,11 @@
     text-align: center;
     justify-content: center;
     justify-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(215, 215, 215);
     position: absolute;
     visibility:visible;
+
+    
 }
 h1{
     padding-top: 15px;
@@ -32,9 +34,10 @@ h1{
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+    background-color: rgb(215, 215, 215);
 }
 .calculadora{
-    
+    background-color: white;
     width: 50%;
     max-width: 600px;
     min-width: 200px;
@@ -43,24 +46,23 @@ h1{
     border-radius: 10px;
     box-shadow:7px 4px 4px rgb(156, 156, 156);
     margin: auto;
-    background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
 }
 .botao{
     max-width: 620px;
     min-width: 100px;
     font-size: 15px;
-    padding: 2px;
+    padding: 4px;
     margin: auto;
     border-radius: 6px;
-    background-color:rgb(255, 255, 255);
+    background-color: rgb(9, 9, 122);
     border: 2px  rgb(51, 49, 153) solid;
-    color:  rgb(51, 49, 153);
+    color:  rgb(255, 255, 255);
     
 }
 .botao:hover{
-    background-color:rgb(51, 49, 153);
+    background-color:rgb(255, 255, 255);
     border: 2px  rgb(51, 49, 153) solid;
-    color:  white;
+    color: rgb(9, 9, 122);
     font-weight: bold;
 }
 .caixa{
@@ -140,13 +142,15 @@ h1{
     transition: 5%;
 }
 .rodape{
+   padding: 20px;
    width: 50%; 
-   height: 300px;
    color: rgb(17, 17, 18);
+   background-color: white;
 }
 .div_anuncio_rodape{
     width: 99%;
     margin: auto;
+    background-color: white;
     
 }
 
@@ -162,7 +166,6 @@ h1{
         text-align: center;
         justify-content: center;
         justify-items: center;
-        background-color: rgb(255, 255, 255);
         margin: auto;
     }
     .fonte_size{
@@ -172,7 +175,7 @@ h1{
         text-align: center;
     }
     .calculadora{
-        background-color: rgb(221, 231, 236);
+        
         box-shadow:4px 2px 2px rgb(156, 156, 156);
         text-align: center;
         padding: 1px;
@@ -228,7 +231,6 @@ h1{
         text-align: center;
         justify-content: center;
         justify-items: center;
-        background-color: rgb(255, 255, 255);
         margin: 0px;
     }
     
@@ -281,7 +283,7 @@ h1{
         min-width: 10px; 
     }
     .calculadora{
-        background-color: rgb(221, 231, 236);
+        
         box-shadow:4px 2px 2px rgb(156, 156, 156);
         max-width: 99%;
         min-width: 99%;
@@ -291,14 +293,15 @@ h1{
         border-radius: 5px;
         margin: 0px;
         font-size:12px;
-        background-image: linear-gradient( rgb(198, 220, 231) , rgb(228, 248, 250));
+        
+        
     }
     .caixa{
         max-width: 500px;
         min-width: 100px;
         padding: 1px;
         margin: auto;
-        font-size: 13px;
+        font-size: 13.5px;
         
     }
     .botao{
@@ -328,6 +331,7 @@ h1{
     .div_central{
         display:block;
         padding: 0px;
+       
     }
     .div_anuncio{
         width: 95%;
@@ -336,6 +340,7 @@ h1{
     }
     .rodape{
         width: 99%; 
+        padding: 0px;
      }
     
 }
