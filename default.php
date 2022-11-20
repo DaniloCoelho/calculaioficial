@@ -113,18 +113,16 @@
             <ul class="ulprincipal">
                 <a href="default.php" class="dropcalculadoras">
                     <li class="liprincipal">Início</li>
-                    
                 </a>
-                
-                <li class="liprincipal" for="radio">
+
+                <label for="radio">
+                <li class="liprincipal">
                     <input type="checkbox" name="radio-btn" class="radioI" id="radio">
                     <a class="dropcalculadoras" >
-                        <label for="radio">Calculadoras &#9662;</label> 
-                        
+                        Financeiro &#9662;
                     </a>
+                </label>
                     <ul class="ulsecundarioI">
-                        <li class="label_dropdown">Financeiro</li>
-                        <div class="borda_abaixo"></div>
                         <a href="financiamento.html">
                             <li class="lisecundario">
                                 Financiamentos
@@ -139,8 +137,17 @@
                         <a href="precificar.html">
                             <li class="lisecundario">Precificar seu trabalho</li>
                         </a>
-                        <li class="label_dropdown"> Geometria </li>
-                        <div class="borda_abaixo"></div>
+                    </ul>
+                </li>
+
+                <label for="radioI">
+                <li class="liprincipal">
+                    <input type="checkbox" name="radio-btn" class="radioI" id="radioI">
+                    <a class="dropcalculadoras" >
+                        Geometria &#9662;
+                    </a>
+                </label>
+                    <ul class="ulsecundarioI">
                         <a href="cilindro.html">
                             <li class="lisecundario">Cilindro</li>
                         </a>
@@ -156,24 +163,35 @@
                         <a href="piramidequadrada.html">
                             <li class="lisecundario">Pirâmide quadrada</li>
                         </a>
-                        <li class="label_dropdown"> Elétrica / Eletrônica </li>
-                        <div class="borda_abaixo"></div>
-                        <a href="leideohm.html">
-                            <li class="lisecundario">Potência /Tensão /Corrente</li>
-                        </a>
-                        <a href="resistividade.html">
-                            <li class="lisecundario">Resistência de um condutor</li>
-                        </a>
-                        
+                            
                     </ul>
                 </li>
-                    
+
+                <label for="radioIa">
+                    <li class="liprincipal">
+                        <input type="checkbox" name="radio-btn" class="radioI" id="radioIa">
+                        <a class="dropcalculadoras" >
+                            Elétrica / Eletrônica &#9662;
+                        </a>
+                    </label>
+                        <ul class="ulsecundarioI">
+                            <a href="leideohm.html">
+                                <li class="lisecundario">Potência /Tensão /Corrente</li>
+                            </a>
+                            <a href="resistividade.html">
+                                <li class="lisecundario">Resistência de um condutor</li>
+                            </a>
+                        </ul>
+                    </li>
+
+                <label for="radioII"> 
                 <li class="liprincipal">
                     <input type="checkbox" name="radio-btn" class="radioI" id="radioII">
                     <a class="dropcalculadoras">
-                        <label for="radioII">Conversores&#9662;</label>
+                        Conversores&#9662;
                         
                     </a>
+                </label>  
                     <ul class="ulsecundarioI">
                         <a href="medidas_comprimento.html">
                             <li class="lisecundario">Medidas de comprimento</li>
